@@ -79,15 +79,15 @@ function IntroContent() {
 					<span>
 						<img
 							className='langIcon'
-							src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg'
-							alt='Redux'
+							src={expressWhite}
+							alt='Express.js'
 						/>
 					</span>
 					<span>
 						<img
 							className='langIcon'
-							src={expressWhite}
-							alt='Express.js'
+							src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg'
+							alt='Redux'
 						/>
 					</span>
 				</div>
