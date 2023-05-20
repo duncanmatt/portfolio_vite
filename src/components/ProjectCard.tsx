@@ -6,6 +6,7 @@ type Project = {
 	desc: string;
 	pic: string;
 	url: string;
+	urlGH: string;
 };
 
 function ProjectCard(project: Project) {
@@ -31,7 +32,7 @@ function ProjectCard(project: Project) {
 					<div className='projCardActions'>
 						<a
 							className='projCardGH'
-							href={project.url}>
+							href={project.urlGH}>
 							<GitHubIcon />
 						</a>
 						<a
