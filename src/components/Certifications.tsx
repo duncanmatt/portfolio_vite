@@ -1,7 +1,3 @@
-import { Card } from 'antd';
-
-const { Meta } = Card;
-
 type Certification = {
 	id: number;
 	pic: string;
@@ -17,23 +13,19 @@ function Certifications({ certs }: Certifications) {
 	return (
 		<div className='certifications'>
 			{certs.map(cert => (
-				<Card
+				<a
+					href={cert.url}
 					key={cert.id}
-					size='small'
-					cover={
+					style={{ position: 'relative' }}>
+					<div>
 						<img
+							className='certPic'
 							src={cert.pic}
 							alt={cert.desc}
 						/>
-					}
-					style={{
-						minWidth: 'inherit',
-						maxWidth: '720px',
-						height: 'inherit',
-						backgroundColor: '#fff',
-					}}>
-					<Meta description={cert.desc} />
-				</Card>
+						<span className='certDesc'>{cert.desc}</span>
+					</div>
+				</a>
 			))}
 		</div>
 	);

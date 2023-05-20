@@ -4,10 +4,16 @@
 	--header-color: rgba(35, 46, 17, 0.3);
 	--font-color: rgb(68, 68, 68);
 	--bg-color: rgba(245, 245, 245, 0.1);
+	--bg-blur-gradient: linear-gradient(
+		180deg,
+		rgba(255, 255, 255, 0.15),
+		rgba(255, 255, 255, 0)
+	);
 }
 
 * {
 	box-sizing: border-box;
+	-webkit-font-smoothing: antialiased;
 }
 
 body {
@@ -31,7 +37,8 @@ header {
 	height: 60px;
 	max-width: 100%;
 	line-height: 1.15;
-	color: #f9f9f9;
+	color: #fff;
+	background-color: #2c2c2c;
 }
 
 a {
@@ -39,11 +46,17 @@ a {
 	color: var(--font-color);
 }
 
+ul {
+	list-style: none;
+	margin: 0;
+}
+
 li {
 	text-decoration: none;
 }
 
-img, svg {
+img,
+svg {
 	vertical-align: middle;
 }
 
@@ -53,7 +66,7 @@ img, svg {
 	flex-flow: row;
 	justify-content: space-between;
 	align-items: center;
-	background-color: #121212;
+	padding-inline: 1rem;
 }
 
 h1 {
@@ -76,12 +89,10 @@ h2 {
 	display: grid;
 	grid-template-columns: 1fr minmax(200px, 40vw);
 	grid-template-rows: 60px;
-	background-color: #121212;
 	padding-inline: 1rem 0;
 }
 
 .mobileHeaderName {
-	padding-inline: 1rem 0;
 	font-size: 1.85rem;
 	font-family: 'Sigmar One', cursive;
 }
@@ -103,7 +114,6 @@ h2 {
 	display: flex;
 	align-items: center;
 	color: #f9f9f9;
-	font-size: 2rem;
 }
 
 .right > a:hover {
@@ -128,7 +138,7 @@ h2 {
 	padding-inline: 3rem 1rem;
 	/* margin-inline-end: 2rem; */
 	z-index: 10;
-	background-color: #f9f9f9;
+	background: #f9f9f9;
 }
 
 .menuLink {
@@ -196,105 +206,119 @@ h2 {
 	flex-wrap: wrap;
 	gap: 0.5rem;
 	padding-block: 1rem;
-}
-
-.cardWrapper {
-	display: block;
-	width: 100%;
-	height: 420px;
-	position: relative;
-	background-color: #f9f9f9;
+	padding-inline: 2rem;
+	align-self: center;
 }
 
 .latest {
 	display: block;
 	padding-block: 1rem 3rem;
-	min-height: 500px;
-}
-
-.latest .ant-card-cover {
-	height: 300px;
-}
-
-.latest .ant-card-body {
-	height: 150px;
-}
-
-.carouselWrapper button {
-	background: none;
-	border: none;
-	color: var(--primary-color);
-	font-size: 2rem;
 }
 
 .latest-lg {
-	margin: 5px;
-	display: grid;
-	grid-template-rows: min-content 1fr;
+	display: block;
 	padding-block: 1rem;
 }
 
+.latestCards .carousel {
+	height: 31.25rem;
+}
+
 .latestCards {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: space-around;
-	flex-flow: row wrap;
-	padding-inline: 3rem;
-	padding-block: 1.75rem 1rem;
-	column-gap: 1rem;
-	row-gap: 2rem;
-}
-
-.latestCards > a:hover {
-	filter: drop-shadow(0px 2px 4px var(--primary-color));
-}
-
-.carouselLarge {
-	display: flex;
+	-ms-flex-direction: column;
 	flex-direction: column;
-	justify-content: center;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-webkit-box-direction: normal;
+	-webkit-box-orient: vertical;
+	-webkit-box-pack: justify;
+	margin: 4.6875rem 0;
+	padding: 0 0.78125rem;
 }
 
-.carouselSmall {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
+.projCard {
+	aspect-ratio: 1 / 1;
+	font-weight: 500;
+	position: relative;
+	height: 100%;
+	width: 100%;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
 }
 
-.carousel {
-	overflow-x: hidden;
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: space-evenly;
-	flex: 0;
-	padding-block: 2rem 0.5rem;
+.projCard:before .projCardInner:before {
+	background-image: -webkit-gradient(
+		linear,
+		left top,
+		left bottom,
+		color-stop(38%, transparent),
+		to(rgba(0, 0, 0, 0.5))
+	);
+	background-image: linear-gradient(
+		180deg,
+		transparent 38%,
+		rgba(0, 0, 0, 0.5)
+	);
+	border-radius: 1.25rem;
+	content: '';
+	height: 100%;
+	position: absolute;
+	width: 100%;
+	z-index: 0;
+}
+
+.projCardInner {
+	position: relative;
+	height: 100%;
+	/* background-color: #fff; */
+	-webkit-box-direction: normal;
+	-webkit-box-flex: 0;
+	border-radius: 1.25rem;
+	/* -ms-flex: 0 0 33.333%;
+	flex: 0 0 33.333%; */
+	-webkit-transform: translateY(0);
+	transform: translateY(0);
+	border-radius: 1.25rem;
+}
+
+.projCardWrapper:hover {
+	-webkit-transform: translateY(-0.25rem);
+	transform: translateY(-0.25rem);
+}
+
+.projCardLink {
+	display: block;
+	height: 100%;
 	position: relative;
 }
 
-.carousel > button {
+.projCardPic {
 	position: absolute;
+	overflow-clip-margin: content-box;
+	aspect-ratio: 1;
+	object-fit: cover;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+	background-repeat: no-repeat;
+	border-radius: 1.25rem;
+	opacity: 1;
+}
+
+.projCardInfo {
+	backdrop-filter: blur(135px);
+	background-color: rgba(255, 255, 255, 0.09);
+	color: #000;
 	display: flex;
-	user-select: none;
-	cursor: pointer;
-	z-index: 2;
-	color: var(--font-color);
-}
-
-.carouselPrev {
-	left: 10px;
-}
-
-.carouselNext {
-	right: 10px;
-}
-
-.carouselItem {
-	display: none;
-}
-
-.carousel .cardWrapper {
-	border-radius: 4px;
-	border: 1px solid rgb(217, 217, 217);
+	align-items: flex-start;
+	-webkit-box-orient: vertical;
+	position: absolute;
+	bottom: 1.25rem;
+	left: 1.25rem;
+	z-index: 3;
 }
 
 .certified {
@@ -308,6 +332,14 @@ h2 {
 	justify-content: center;
 	gap: 3rem;
 	padding-block: 2rem;
+}
+
+.certPic {
+	overflow-clip-margin: content-box;
+	object-fit: contain;
+	width: 100%;
+	overflow: hidden;
+	background-repeat: no-repeat;
 }
 
 .upper {
@@ -339,6 +371,7 @@ h2 {
 		justify-content: space-evenly;
 	}
 	.briefAbout {
+		padding-inline: 1rem 0;
 		margin-block: auto;
 		font-size: 3.45rem;
 	}
@@ -347,6 +380,7 @@ h2 {
 @media (min-width: 800px) {
 	.briefAbout {
 		font-size: 3.64rem;
+		line-height: 1.36;
 	}
 }
 
@@ -358,7 +392,7 @@ h2 {
 
 @media (min-width: 1000px) {
 	.briefAbout {
-		font-size: 4.45rem;
+		font-size: 4.5rem;
 	}
 	h2 {
 		padding-inline: 3rem;
@@ -368,7 +402,8 @@ h2 {
 @media (min-width: 1200px) {
 	.briefAbout {
 		font-size: 5rem;
-		text-align: center;
+		line-height: 1.45;
+		align-self: center;
 	}
 }
 
@@ -378,7 +413,6 @@ h2 {
 		margin-inline: auto;
 	}
 	.briefAbout {
-		line-height: 1.45;
 		font-size: 6rem;
 	}
 }

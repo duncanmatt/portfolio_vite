@@ -1,26 +1,22 @@
 import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import { useMediaQuery } from 'react-responsive';
-import {
-	RedditOutlined,
-	LinkedinOutlined,
-	GithubOutlined,
-	MenuOutlined,
-	CloseOutlined,
-	RightOutlined,
-} from '@ant-design/icons';
+import RedditIcon from '@mui/icons-material/Reddit';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import MenuSharpIcon from '@mui/icons-material/MenuSharp';
+import CloseIcon from '@mui/icons-material/Close';
+import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 
 type Link = {
-	id: number,
-	title: string,
-	url: string,
-	icon: JSX.Element
-}
+	id: number;
+	title: string;
+	url: string;
+	icon: JSX.Element;
+};
 
 type Links = {
-	links: Array<Link>
-}
-
+	links: Array<Link>;
+};
 
 function MobileHeader({ links }: Links) {
 	const [menuOpen, setMenuOpen] = useState(false);
@@ -32,42 +28,34 @@ function MobileHeader({ links }: Links) {
 				<div className='menuWrapper'>
 					<div className='menuUpperContent'>
 						<h1 className='mobileHeaderName'>Matt Duncan</h1>
-						<CloseOutlined
+						<CloseIcon
 							onClick={showMenu}
-							style={{
-								fontSize: '1.2rem',
-							}}
+							fontSize='large'
 						/>
 					</div>
-					<AnimatePresence>
-						<motion.div
-							initial={{ opacity: 0 }}
-							animate={{ opacity: 1 }}
-							exit={{ opacity: 0 }}
-							className='menuLowerContent'>
-							<span className='menuLinks'>
-								{links.map(link => (
-									<a
-										key={link.id}
-										href={link.url}
-										className='menuLink'
-										onClick={showMenu}>
-										<div>
-											{link.icon} {link.title}
-										</div>
-										<RightOutlined style={{ alignSelf: 'flex-end' }} />
-									</a>
-								))}
-							</span>
-						</motion.div>
-					</AnimatePresence>
+					<div className='menuLowerContent'>
+						<span className='menuLinks'>
+							{links.map(link => (
+								<a
+									key={link.id}
+									href={link.url}
+									className='menuLink'
+									onClick={showMenu}>
+									<div>
+										{link.icon} {link.title}
+									</div>
+									<NavigateNextIcon style={{ alignSelf: 'flex-end' }} />
+								</a>
+							))}
+						</span>
+					</div>
 				</div>
 			) : (
 				<div className='mobileHeader'>
 					<h1 className='mobileHeaderName'>Matt Duncan</h1>
-					<MenuOutlined
+					<MenuSharpIcon
+						fontSize='large'
 						onClick={showMenu}
-						style={{ paddingInline: '0 1rem', fontSize: '1.2em' }}
 					/>
 				</div>
 			)}
@@ -84,7 +72,7 @@ function DesktopHeader({ links }: Links) {
 					<a
 						key={link.id}
 						href={link.url}
-						className='header-link'>
+						className='navLink'>
 						{link.icon}
 					</a>
 				))}
@@ -99,19 +87,31 @@ function Navbar() {
 			id: 0,
 			title: 'Linkedin',
 			url: 'https://linkedin.com/in/matt-duncan-601997268',
-			icon: <LinkedinOutlined />,
+			icon: (
+				<LinkedInIcon
+					style={{ display: 'inline-block', height: '36px', width: '36px' }}
+				/>
+			),
 		},
 		{
 			id: 1,
 			title: 'GitHub',
 			url: 'https://github.com/duncanmatt',
-			icon: <GithubOutlined />,
+			icon: (
+				<GitHubIcon
+					style={{ display: 'inline-block', height: '36px', width: '36px' }}
+				/>
+			),
 		},
 		{
 			id: 2,
 			title: 'Reddit',
 			url: 'https://www.reddit.com/user/marriedtomdn',
-			icon: <RedditOutlined />,
+			icon: (
+				<RedditIcon
+					style={{ display: 'inline-block', height: '36px', width: '36px' }}
+				/>
+			),
 		},
 	];
 	const isMobile = useMediaQuery({ query: '(max-width: 600px)' });

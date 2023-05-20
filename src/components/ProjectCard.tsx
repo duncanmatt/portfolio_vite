@@ -1,7 +1,3 @@
-import { Card } from 'antd';
-
-const { Meta } = Card;
-
 type Project = {
 	id: number;
 	title: string;
@@ -12,28 +8,27 @@ type Project = {
 
 function ProjectCard(project: Project) {
 	return (
-		<a href={project.url}>
-			<Card
-				key={project.id}
-				hoverable
-				cover={
-					<img
-						src={project.pic}
-						alt={project.title}
-						style={{ maxHeight: '300px', maxWidth: '300px' }}
-					/>
-				}
-				style={{
-					width: 300,
-					height: 450,
-					backgroundColor: '#fff',
-				}}>
-				<Meta
-					title={project.title}
-					description={project.desc}
-				/>
-			</Card>
-		</a>
+		<div className='projCard'>
+			<div
+				className='projCardInner'
+				key={project.id}>
+				<a
+					href={project.url}
+					className='projCardLink'>
+					<picture>
+						<img
+							className='projCardPic'
+							src={project.pic}
+							alt={project.title}
+						/>
+					</picture>
+				</a>
+				<div className='projCardInfo'>
+					<h3 className='projCardTitle'>{project.title}</h3>
+					<span className='projCardActions'></span>
+				</div>
+			</div>
+		</div>
 	);
 }
 

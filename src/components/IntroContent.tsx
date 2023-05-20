@@ -17,8 +17,8 @@ function IntroContent() {
 						alt='Matt Duncan'
 					/>
 				</div>
-				<div className='techStack'>
-					<span>
+				<ul className='techStack'>
+					<li>
 						<img
 							className='langIcon'
 							src={
@@ -26,71 +26,71 @@ function IntroContent() {
 							}
 							alt='HTML5'
 						/>
-					</span>
-					<span>
+					</li>
+					<li>
 						<img
 							className='langIcon'
 							src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg'
 							alt='CSS3'
 						/>
-					</span>
-					<span>
+					</li>
+					<li>
 						<img
 							className='langIcon'
 							src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg'
 							alt='JavaScript'
 						/>
-					</span>
-					<span>
+					</li>
+					<li>
 						<img
 							className='langIcon'
 							src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg'
 							alt='Figma'
 						/>
-					</span>
-					<span>
+					</li>
+					<li>
 						<img
 							className='langIcon'
 							src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg'
 							alt='React'
 						/>
-					</span>
-					<span>
+					</li>
+					<li>
 						<img
 							className='langIcon'
 							src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg'
 							alt='Node.js'
 						/>
-					</span>
-					<span>
+					</li>
+					<li>
 						<img
 							className='langIcon'
 							src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg'
 							alt='TypeScript'
 						/>
-					</span>
-					<span>
+					</li>
+					<li>
 						<img
 							className='langIcon'
 							src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg'
 							alt='MongoDB'
 						/>
-					</span>
-					<span>
+					</li>
+					<li>
 						<img
 							className='langIcon'
 							src={expressWhite}
 							alt='Express.js'
 						/>
-					</span>
-					<span>
+					</li>
+					<li>
 						<img
 							className='langIcon'
 							src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg'
 							alt='Redux'
 						/>
-					</span>
-				</div>
+					</li>
+				</ul>
 			</div>
 		</div>
 	);
