@@ -31,14 +31,17 @@ function ProjectCard(project: Project) {
 					<p className='projCardDesc'>{project.desc}</p>
 					<div className='projCardActions'>
 						<a
-							className='projCardGH'
-							href={project.urlGH}>
-							<GitHubIcon />
-						</a>
-						<a
 							className='projCardVisit'
 							href={project.url}>
 							Visit
+						</a>
+						<a
+							className='projCardGH'
+							href={project.urlGH}>
+							<GitHubIcon
+								fontSize='large'
+								style={{ color: '#fff' }}
+							/>
 						</a>
 					</div>
 				</div>
