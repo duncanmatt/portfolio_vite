@@ -1,9 +1,9 @@
 import ProjectCard from './ProjectCard';
-import ghFinderPreview from '../layout/assets/ghFinderPreview.png';
-import fbAppPreview from '../layout/assets/fbAppPreview.png';
-import bswPreview from '../layout/assets/bswPreview.png';
-import hmPreview from '../layout/assets/hmPreview.png';
-import ffaPreview from '../layout/assets/ffa.jpg';
+import ssGHF from '../layout/assets/ssGHF.svg';
+import ssFUI from '../layout/assets/ssFUI.svg';
+import ssBSW from '../layout/assets/ssBSW.svg';
+import ssHMP from '../layout/assets/ssHMP.svg';
+import ssFFA from '../layout/assets/ssFFA.svg';
 
 function LatestDesktop() {
 	const items = [
@@ -11,35 +11,35 @@ function LatestDesktop() {
 			id: 0,
 			title: 'Fantasy Football Auxiliary',
 			desc: 'Web app made with Next.js which consolidates necessary information for efficient draft research.',
-			pic: `${ffaPreview}`,
+			pic: `${ssFFA}`,
 			url: 'https://ffauxiliary.com',
 		},
 		{
 			id: 1,
 			title: 'GITHUB FINDER',
 			desc: 'React app that gives users the ability to search for and view profiles on GitHub by making use of the GitHub API.',
-			pic: `${ghFinderPreview}`,
+			pic: `${ssGHF}`,
 			url: 'https://github-finder-rho-ivory.vercel.app/',
 		},
 		{
 			id: 2,
 			title: 'BLACK SHEEP WORLD',
 			desc: 'Website made using the MERN stack for my friend in the process of starting a clothing brand.',
-			pic: `${bswPreview}`,
+			pic: `${ssBSW}`,
 			url: 'https://blacksheepworld.herokuapp.com',
 		},
 		{
 			id: 3,
 			title: 'FEEDBACK APP',
 			desc: 'React app for leaving reviews that are stored with firebase',
-			pic: `${fbAppPreview}`,
+			pic: `${ssFUI}`,
 			url: 'https://feedback-app-seven-mauve.vercel.app/',
 		},
 		{
 			id: 4,
 			title: 'HOUSE MARKETPLACE',
 			desc: 'React app for posting or viewing real estate listings that are stored with firebase',
-			pic: `${hmPreview}`,
+			pic: `${ssHMP}`,
 			url: 'https://house-marketplace-nu-ochre.vercel.app/',
 		},
 	];
