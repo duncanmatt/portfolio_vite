@@ -211,6 +211,7 @@ h2 {
 }
 
 .latest {
+	position: relative;
 	display: block;
 	padding-block: 1rem 3rem;
 }
@@ -237,16 +238,20 @@ h2 {
 	-webkit-box-pack: justify;
 	margin: 4.6875rem 0;
 	padding: 0 0.78125rem;
+	justify-content: space-between;
 }
 
 .projCard {
-	aspect-ratio: 1 / 1;
+	flex: 0;
 	font-weight: 500;
-	position: relative;
 	height: 100%;
 	width: 100%;
 	-webkit-box-orient: horizontal;
 	-webkit-box-direction: normal;
+}
+
+.projCard:not(:last-child) {
+	margin-bottom: 40px;
 }
 
 .projCard:before .projCardInner:before {
@@ -271,16 +276,9 @@ h2 {
 }
 
 .projCardInner {
-	position: relative;
 	height: 100%;
-	/* background-color: #fff; */
 	-webkit-box-direction: normal;
-	-webkit-box-flex: 0;
 	border-radius: 1.25rem;
-	/* -ms-flex: 0 0 33.333%;
-	flex: 0 0 33.333%; */
-	-webkit-transform: translateY(0);
-	transform: translateY(0);
 	border-radius: 1.25rem;
 }
 
@@ -293,32 +291,51 @@ h2 {
 	display: block;
 	height: 100%;
 	position: relative;
+	aspect-ratio: 1 / 1;
 }
 
 .projCardPic {
 	position: absolute;
 	overflow-clip-margin: content-box;
-	aspect-ratio: 1;
 	object-fit: cover;
 	height: 100%;
 	width: 100%;
 	overflow: hidden;
 	background-repeat: no-repeat;
-	border-radius: 1.25rem;
+	border-top-left-radius: 1.25rem;
+	border-top-right-radius: 1.25rem;
 	opacity: 1;
 }
 
 .projCardInfo {
-	backdrop-filter: blur(135px);
+	/* backdrop-filter: blur(135px); */
 	background-color: rgba(255, 255, 255, 0.09);
-	color: #000;
+	color: #fff;
 	display: flex;
+	flex-direction: column;
 	align-items: flex-start;
 	-webkit-box-orient: vertical;
-	position: absolute;
-	bottom: 1.25rem;
-	left: 1.25rem;
 	z-index: 3;
+	border-bottom-left-radius: 1.25rem;
+	border-bottom-right-radius: 1.25rem;
+	padding-inline: 2rem;
+}
+
+.projCardTitle {
+	width: 100%;
+	text-align: center;
+}
+
+.projCardDesc {
+	text-align: center;
+}
+
+.projCardActions {
+	color: #f9f9f9;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
 }
 
 .certified {

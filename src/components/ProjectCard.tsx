@@ -1,3 +1,5 @@
+import GitHubIcon from '@mui/icons-material/GitHub';
+
 type Project = {
 	id: number;
 	title: string;
@@ -25,7 +27,19 @@ function ProjectCard(project: Project) {
 				</a>
 				<div className='projCardInfo'>
 					<h3 className='projCardTitle'>{project.title}</h3>
-					<span className='projCardActions'></span>
+					<p className='projCardDesc'>{project.desc}</p>
+					<div className='projCardActions'>
+						<a
+							className='projCardGH'
+							href={project.url}>
+							<GitHubIcon />
+						</a>
+						<a
+							className='projCardVisit'
+							href={project.url}>
+							Visit
+						</a>
+					</div>
 				</div>
 			</div>
 		</div>
