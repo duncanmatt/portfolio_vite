@@ -365,12 +365,19 @@ h2 {
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: center;
-	gap: 3rem;
+	gap: 2rem;
 	padding-block: 2rem;
 }
 
-.certInnerDesc:hover {
-	backdrop-filter: blur(135px);
+.certifications a {
+	color: #fff;
+	display: flex;
+	flex-direction: column;
+}
+
+.certDesc {
+	margin-top: 1rem;
+	align-self: center;
 }
 
 .certPic {
