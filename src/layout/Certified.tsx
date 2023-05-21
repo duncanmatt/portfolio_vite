@@ -22,7 +22,7 @@ function Certified() {
 			id: 3,
 			pic: ReactPic,
 			desc: 'A great course from Brad Traversy, one of my favorite content creators. I would highly recommend to anyone wanting to start building modern apps.',
-			url: 'https://www.udemy.com/certificate/UC-cdf8de33-c1ea-462d-af3e-1f9f47f1',
+			url: 'https://www.udemy.com/certificate/UC-cdf8de33-c1ea-462d-af3e-1f9f47f13676/',
 		},
 	];
 
