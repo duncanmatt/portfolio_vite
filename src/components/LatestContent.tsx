@@ -1,14 +1,14 @@
 import { useMediaQuery } from 'react-responsive';
 import ProjectCard from './ProjectCard';
 import ssGHF from '../layout/assets/ssGHF.svg';
-import ssFUI from '../layout/assets/ssFUI.svg';
 import ssBSW from '../layout/assets/ssBSW.svg';
 import ssHMP from '../layout/assets/ssHMP.svg';
 import ssFFA from '../layout/assets/ssFFA.svg';
 
 function LatestContent() {
 	const isLarge = useMediaQuery({
-		query: '(min-width: 1200px)',
+		minDeviceWidth: 1070,
+		query: '(min-width: 1070px)',
 	});
 
 	const items = [
@@ -35,14 +35,6 @@ function LatestContent() {
 			pic: `${ssBSW}`,
 			url: 'https://blacksheepworld.herokuapp.com',
 			urlGH: 'https://github.com/duncanmatt/bsw-site',
-		},
-		{
-			id: 3,
-			title: 'FEEDBACK APP',
-			desc: 'React app for leaving reviews that are stored with firebase',
-			pic: `${ssFUI}`,
-			url: 'https://feedback-app-seven-mauve.vercel.app/',
-			urlGH: 'https://github.com/duncanmatt/feedback-app',
 		},
 		{
 			id: 4,
