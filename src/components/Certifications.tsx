@@ -1,3 +1,5 @@
+import CertCard from './CertCard';
+
 type Certification = {
 	id: number;
 	pic: string;
@@ -13,19 +15,7 @@ function Certifications({ certs }: Certifications) {
 	return (
 		<div className='certifications'>
 			{certs.map(cert => (
-				<a
-					href={cert.url}
-					key={cert.id}
-					style={{ position: 'relative' }}>
-					<div>
-						<img
-							className='certPic'
-							src={cert.pic}
-							alt={cert.desc}
-						/>
-						<span className='certDesc'>{cert.desc}</span>
-					</div>
-				</a>
+				<CertCard {...cert} />
 			))}
 		</div>
 	);

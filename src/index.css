@@ -309,7 +309,6 @@ h2 {
 }
 
 .projCardInfo {
-	/* backdrop-filter: blur(135px); */
 	background-color: #2c2c2c;
 	color: #fff;
 	display: flex;
@@ -368,6 +367,10 @@ h2 {
 	justify-content: center;
 	gap: 3rem;
 	padding-block: 2rem;
+}
+
+.certInnerDesc:hover {
+	backdrop-filter: blur(135px);
 }
 
 .certPic {
