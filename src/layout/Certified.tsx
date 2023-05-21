@@ -1,7 +1,9 @@
 import DSAPic from '../layout/assets/dsa.jpg';
 import ReactPic from '../layout/assets/reactCert.jpg';
 import BeginnerJSPic from '../layout/assets/beginner-js-cert.png';
+import { useMediaQuery } from 'react-responsive';
 import Certifications from '../components/Certifications';
+import LgCertifications from '../components/LgCertifications';
 
 function Certified() {
 	const certs = [
@@ -25,10 +27,19 @@ function Certified() {
 		},
 	];
 
+	const isLarge = useMediaQuery({
+		minDeviceWidth: 1070,
+		type: 'screen',
+	});
+
 	return (
 		<section className='certified'>
 			<h2>Certified</h2>
-			<Certifications certs={certs} />
+			{isLarge ? (
+				<LgCertifications certs={certs} />
+			) : (
+				<Certifications certs={certs} />
+			)}
 		</section>
 	);
 }

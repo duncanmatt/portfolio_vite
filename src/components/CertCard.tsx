@@ -9,8 +9,7 @@ const CertCard = (cert: Certification) => {
 	return (
 		<a
 			className='cert'
-			href={cert.url}
-			key={cert.id}>
+			href={cert.url}>
 			<div
 				style={{ position: 'relative' }}
 				className='certInner'>

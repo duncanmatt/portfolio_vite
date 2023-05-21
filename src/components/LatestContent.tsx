@@ -8,7 +8,7 @@ import ssFFA from '../layout/assets/ssFFA.svg';
 function LatestContent() {
 	const isLarge = useMediaQuery({
 		minDeviceWidth: 1070,
-		query: '(min-width: 1070px)',
+		type: 'screen',
 	});
 
 	const items = [

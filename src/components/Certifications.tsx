@@ -33,7 +33,10 @@ function Certifications({ certs }: Certifications) {
 	return (
 		<div className='certifications'>
 			{certs.map(cert => (
-				<CertCard {...cert} />
+				<CertCard
+					key={cert.id}
+					{...cert}
+				/>
 			))}
 		</div>
 	);
