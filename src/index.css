@@ -428,7 +428,9 @@ h2 {
 	padding-block: 2rem;
 }
 
-.cert {
+.cert{
+	border-radius: 8px;
+	filter: drop-shadow(0 2px 2px #000) drop-shadow(0 3px 4px #000);;
 }
 
 .hidden {
