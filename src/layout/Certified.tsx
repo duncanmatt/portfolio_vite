@@ -3,7 +3,6 @@ import ReactPic from '../layout/assets/reactCert.jpg';
 import BeginnerJSPic from '../layout/assets/beginner-js-cert.png';
 import { useMediaQuery } from 'react-responsive';
 import Certifications from '../components/Certifications';
-import LgCertifications from '../components/LgCertifications';
 
 function Certified() {
 	const certs = [
@@ -33,13 +32,9 @@ function Certified() {
 	});
 
 	return (
-		<section className='certified'>
+		<section className={isLarge ? 'certified-lg' : 'certified'}>
 			<h2>Certified</h2>
-			{isLarge ? (
-				<LgCertifications certs={certs} />
-			) : (
-				<Certifications certs={certs} />
-			)}
+			<Certifications certs={certs} />
 		</section>
 	);
 }
