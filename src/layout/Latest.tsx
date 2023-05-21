@@ -1,13 +1,9 @@
-// import LatestMobile from '../components/LatestMobile';
-import LatestDesktop from '../components/LatestDesktop';
-// import { useMediaQuery } from 'react-responsive';
+import LatestContent from '../components/LatestContent';
 
 function Latest() {
-	// const isMobile = useMediaQuery({ query: '(max-width: 725px)' });
-
 	return (
 		<section className='latest'>
-			<LatestDesktop />
+			<LatestContent />
 		</section>
 	);
 }

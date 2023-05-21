@@ -40,7 +40,7 @@ function ProjectCard(project: Project) {
 							href={project.urlGH}>
 							<GitHubIcon
 								fontSize='large'
-								style={{ color: '#fff' }}
+								// style={{ color: '#fff' }}
 							/>
 						</a>
 					</div>

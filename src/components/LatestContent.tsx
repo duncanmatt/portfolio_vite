@@ -1,3 +1,4 @@
+import { useMediaQuery } from 'react-responsive';
 import ProjectCard from './ProjectCard';
 import ssGHF from '../layout/assets/ssGHF.svg';
 import ssFUI from '../layout/assets/ssFUI.svg';
@@ -5,7 +6,11 @@ import ssBSW from '../layout/assets/ssBSW.svg';
 import ssHMP from '../layout/assets/ssHMP.svg';
 import ssFFA from '../layout/assets/ssFFA.svg';
 
-function LatestDesktop() {
+function LatestContent() {
+	const isLarge = useMediaQuery({
+		query: '(min-width: 1200px)',
+	});
+
 	const items = [
 		{
 			id: 0,
@@ -51,7 +56,7 @@ function LatestDesktop() {
 
 	return (
 		<>
-			<div className='latest-lg'>
+			<div className={isLarge ? 'latest-lg' : 'latest-sm'}>
 				<h2>Recent Work</h2>
 				<div className='latestCards'>
 					{items.map(item => (
@@ -66,4 +71,4 @@ function LatestDesktop() {
 	);
 }
 
-export default LatestDesktop;
+export default LatestContent;

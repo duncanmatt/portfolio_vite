@@ -19,7 +19,7 @@
 body {
 	margin: 0;
 	background-color: #121212;
-	height: 100vh;
+	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
@@ -225,7 +225,12 @@ h2 {
 	height: 31.25rem;
 }
 
-.latestCards {
+.latest-lg .latestCards {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.latest-sm .latestCards {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -241,7 +246,7 @@ h2 {
 	justify-content: space-between;
 }
 
-.projCard {
+.latest-sm .projCard {
 	flex: 0;
 	font-weight: 500;
 	height: 100%;
@@ -249,6 +254,10 @@ h2 {
 	-webkit-box-orient: horizontal;
 	-webkit-box-direction: normal;
 	filter: drop-shadow(0 2px 2px #000) drop-shadow(0 3px 4px #000);
+}
+
+.latest-lg .projCard {
+	position: relative;
 }
 
 .projCard:not(:last-child) {
@@ -339,6 +348,11 @@ h2 {
 	gap: 1rem;
 }
 
+.projCardActions > a {
+	transition: all 0.35s ease 0s;
+	position: relative;
+}
+
 .projCardVisit {
 	appearance: auto;
 	color: #000;
@@ -354,6 +368,25 @@ h2 {
 	padding-inline: 1.25rem;
 	border-radius: 1.8454rem;
 	border: 2px solid rgba(255, 255, 255, 0);
+}
+
+.projCardVisit:hover {
+	background-color: #b4b4b4;
+	background-image: linear-gradient(
+		to right,
+		transparent,
+		rgba(255, 255, 255, 0.25),
+		transparent
+	);
+	transform: skew(-20px);
+}
+
+.projCardGH {
+	color: #fff;
+}
+
+.projCardGH:hover {
+	color: #b4b4b4;
 }
 
 .certified {
