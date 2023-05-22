@@ -1,7 +1,6 @@
 import DSAPic from '../layout/assets/dsa.jpg';
 import ReactPic from '../layout/assets/reactCert.jpg';
-import GoogleCloudPic from '../layout/assets/google-cloud-intro-cert.jpg';
-import { useMediaQuery } from 'react-responsive';
+import GoogleCloudPic from '../layout/assets/googleCloudPic.jpg';
 import Certifications from '../components/Certifications';
 
 function Certified() {
@@ -26,13 +25,8 @@ function Certified() {
 		},
 	];
 
-	const isLarge = useMediaQuery({
-		minDeviceWidth: 1070,
-		type: 'screen',
-	});
-
 	return (
-		<section className={isLarge ? 'certified-lg' : 'certified'}>
+		<section className='certified'>
 			<h2>Certified</h2>
 			<Certifications certs={certs} />
 		</section>
