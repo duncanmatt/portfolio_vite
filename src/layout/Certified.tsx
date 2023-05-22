@@ -1,6 +1,6 @@
 import DSAPic from '../layout/assets/dsa.jpg';
 import ReactPic from '../layout/assets/reactCert.jpg';
-import BeginnerJSPic from '../layout/assets/beginner-js-cert.png';
+import GoogleCloudPic from '../layout/assets/google-cloud-intro-cert.jpg';
 import { useMediaQuery } from 'react-responsive';
 import Certifications from '../components/Certifications';
 
@@ -14,9 +14,9 @@ function Certified() {
 		},
 		{
 			id: 2,
-			pic: BeginnerJSPic,
+			pic: GoogleCloudPic,
 			desc: 'Was inspired to learn a programming language after having fun playing around with HTML/CSS.',
-			url: 'https://courses.wesbos.com/account/certificate/62c713ae88db94aff310d510',
+			url: 'https://www.coursera.org/account/accomplishments/verify/867P3BDJHCMP',
 		},
 		{
 			id: 3,
