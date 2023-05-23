@@ -69,10 +69,9 @@ function MobileHeader({ links }: Links) {
 								/>
 							</h1>
 						</div>
-						<MenuSharpIcon
-							fontSize='large'
-							onClick={showMenu}
-						/>
+						<div className='mobileNavActions'>
+							<MenuSharpIcon onClick={showMenu} />
+						</div>
 					</div>
 				</div>
 			)}
@@ -83,7 +82,13 @@ function MobileHeader({ links }: Links) {
 function DesktopHeader({ links }: Links) {
 	return (
 		<div className='desktopHeader'>
-			<h1 className='desktopHeaderName'>Matt Duncan</h1>
+			<h1 className='desktopHeaderName'>
+				<img
+					className='headerLogo'
+					src={nameLogo}
+					alt='Matt Duncan'
+				/>
+			</h1>
 			<span className='right'>
 				{links.map(link => (
 					<a
