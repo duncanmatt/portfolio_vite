@@ -5,6 +5,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import MenuSharpIcon from '@mui/icons-material/MenuSharp';
 import CloseIcon from '@mui/icons-material/Close';
+import nameLogo from './assets/nameLogo.svg';
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 
 type Link = {
@@ -27,7 +28,13 @@ function MobileHeader({ links }: Links) {
 			{menuOpen ? (
 				<div className='menuWrapper'>
 					<div className='menuUpperContent'>
-						<h1 className='mobileHeaderName'>Matt Duncan</h1>
+						<h1 className='mobileHeaderName'>
+							<img
+								className='headerLogo'
+								src={nameLogo}
+								alt='Matt Duncan'
+							/>
+						</h1>
 						<CloseIcon
 							onClick={showMenu}
 							fontSize='large'
@@ -51,12 +58,22 @@ function MobileHeader({ links }: Links) {
 					</div>
 				</div>
 			) : (
-				<div className='mobileHeader'>
-					<h1 className='mobileHeaderName'>Matt Duncan</h1>
-					<MenuSharpIcon
-						fontSize='large'
-						onClick={showMenu}
-					/>
+				<div className='mobileHeaderWrapper'>
+					<div className='mobileHeader'>
+						<div className='mobileHeaderName'>
+							<h1>
+								<img
+									className='headerLogo'
+									src={nameLogo}
+									alt='Matt Duncan'
+								/>
+							</h1>
+						</div>
+						<MenuSharpIcon
+							fontSize='large'
+							onClick={showMenu}
+						/>
+					</div>
 				</div>
 			)}
 		</>
@@ -89,7 +106,7 @@ function Navbar() {
 			url: 'https://linkedin.com/in/matt-duncan-601997268',
 			icon: (
 				<LinkedInIcon
-					style={{ display: 'inline-block', height: '36px', width: '36px' }}
+					style={{ display: 'inline-block', height: '35px', width: '35px' }}
 				/>
 			),
 		},
@@ -99,7 +116,7 @@ function Navbar() {
 			url: 'https://github.com/duncanmatt',
 			icon: (
 				<GitHubIcon
-					style={{ display: 'inline-block', height: '36px', width: '36px' }}
+					style={{ display: 'inline-block', height: '35px', width: '35px' }}
 				/>
 			),
 		},
@@ -109,7 +126,7 @@ function Navbar() {
 			url: 'https://www.reddit.com/user/marriedtomdn',
 			icon: (
 				<RedditIcon
-					style={{ display: 'inline-block', height: '36px', width: '36px' }}
+					style={{ display: 'inline-block', height: '35px', width: '35px' }}
 				/>
 			),
 		},

@@ -1,7 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400;600;800&family=Red+Rose:wght@400;500;600;700&display=swap');
+
 :root {
 	--primary-color: #f9f9f9;
 	--hover-color: #1c1c1c;
-	--header-color: rgba(35, 46, 17, 0.3);
 	--font-color: rgb(68, 68, 68);
 	--bg-color: rgba(245, 245, 245, 0.1);
 	--bg-blur-gradient: linear-gradient(
@@ -9,6 +10,8 @@
 		rgba(255, 255, 255, 0.15),
 		rgba(255, 255, 255, 0)
 	);
+	--ff-sans-serif: 'Jost', sans-serif;
+	--ff-display: 'Red Rose', cursive;
 }
 
 * {
@@ -50,8 +53,9 @@ body {
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
-	font-family: 'Source Sans Pro', sans-serif;
+	font-family: var(--ff-sans-serif);
 	font-size: calc(15px + 0.390625vw);
+	font-kerning: auto;
 	line-height: 1.15;
 	color: var(--font-color);
 	text-rendering: optimizeLegibility;
@@ -63,7 +67,6 @@ header {
 	display: block;
 	height: 60px;
 	max-width: 100%;
-	line-height: 1.15;
 	color: #fff;
 	background-color: #2c2c2c;
 }
@@ -87,29 +90,42 @@ svg {
 	vertical-align: middle;
 }
 
-.mobileHeader {
+h1 {
+	padding: 0;
+	margin: 0;
+}
+
+.mobileHeaderWrapper {
 	height: 60px;
+	display: flex;
+}
+
+.mobileHeader {
+	flex: 1;
 	display: flex;
 	flex-flow: row;
 	justify-content: space-between;
+	gap: 2rem;
 	align-items: center;
 	padding-inline: 1rem;
 }
 
-h1 {
-	margin: 0;
-	font-weight: 400;
+.headerLogo {
+	font-size: 0;
+	/* height: 1.3125rem; */
+	max-width: 100%;
+	overflow-clip-margin: content-box;
 }
 
 h2 {
 	padding-inline: 1rem 0;
-	padding-block: 0.5rem 1rem;
 	letter-spacing: 0.21rem;
-	font-family: 'Sigmar One', sans-serif;
-	font-size: 2.4rem;
+	font-family: var(--ff-display);
+	font-size: 3.25rem;
 	margin: 0;
-	color: #212529;
-	-webkit-text-stroke: 1px #f7f7f2;
+	color: #000;
+	text-transform: uppercase;
+	-webkit-text-stroke: 1px #fff;
 }
 
 .desktopHeader {
@@ -120,15 +136,25 @@ h2 {
 }
 
 .mobileHeaderName {
-	font-size: 1.85rem;
-	font-family: 'Sigmar One', cursive;
+	align-items: center;
+	height: 35px;
+	max-width: 100%;
+	line-height: 1;
+	font-weight: 600;
+	text-transform: uppercase;
 }
 
 .desktopHeaderName {
-	font-family: 'Sigmar One', cursive;
-	/* padding-inline-start: 1rem; */
+	font-family: var(--ff-display);
+	text-transform: uppercase;
+	font-weight: 600;
 	display: flex;
 	align-self: center;
+}
+
+.nameLogo {
+	max-width: 100%;
+	height: 35px;
 }
 
 .right {
@@ -231,6 +257,7 @@ h2 {
 .techStack {
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: space-evenly;
 	gap: 0.5rem;
 	padding-block: 1rem;
 	padding-inline: 2rem;
@@ -468,12 +495,25 @@ h2 {
 	.introContent {
 		display: grid;
 		grid-template-columns: repeat(2, minmax(0, 1fr));
-		justify-content: space-evenly;
+		grid-template-rows: minmax(0, 1fr) min-content;
 	}
 	.briefAbout {
+		grid-row: 1;
+		grid-column: 1;
 		padding-inline: 1rem 0;
 		margin-block: auto;
 		font-size: 3.45rem;
+	}
+	.techStack {
+		grid-row: 2;
+		grid-column: 1 / span 2;
+		margin-inline: auto;
+		/* justify-content: space-between; */
+		padding-block: 1rem;
+	}
+	.headshotWrapper {
+		grid-column: 2;
+		grid-row: 1;
 	}
 }
 
@@ -493,9 +533,6 @@ h2 {
 @media (min-width: 1000px) {
 	.briefAbout {
 		font-size: 4.5rem;
-	}
-	h2 {
-		padding-inline: 3rem;
 	}
 }
 
