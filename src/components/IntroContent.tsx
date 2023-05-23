@@ -84,11 +84,13 @@ function IntroContent() {
 				</li>
 			</ul>
 			<div className='headshotWrapper'>
-				<img
-					className='headshot'
-					src={headshot}
-					alt='Matt Duncan'
-				/>
+				<picture>
+					<img
+						className='headshot'
+						src={headshot}
+						alt='Matt Duncan'
+					/>
+				</picture>
 			</div>
 		</div>
 	);

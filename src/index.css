@@ -121,7 +121,7 @@ h2 {
 	padding-inline: 1rem 0;
 	letter-spacing: 0.21rem;
 	font-family: var(--ff-display);
-	font-size: 3.25rem;
+	font-size: 3rem;
 	margin: 0;
 	color: #000;
 	text-transform: uppercase;
@@ -217,22 +217,16 @@ h2 {
 .introContent {
 	display: flex;
 	flex-direction: column;
-	justify-content: space-evenly;
+	gap: 1rem;
 }
 
 .briefAbout {
 	color: var(--primary-color);
-	margin-bottom: 5px;
 	font-size: 2.8rem;
 	font-weight: 600;
 	letter-spacing: 0.01em;
 	line-height: 1.25;
 	padding-inline: 1rem;
-}
-
-.me {
-	display: flex;
-	flex-direction: column;
 }
 
 .langIcon {
@@ -241,16 +235,19 @@ h2 {
 }
 
 .headshotWrapper {
-	aspect-ratio: 1;
+	display: block;
+	max-width: 100%;
 	position: relative;
+	aspect-ratio: 1 / 1;
 }
 
 .headshot {
-	overflow-clip-margin: content-box;
+	height: 100%;
 	object-fit: contain;
+	overflow-clip-margin: content-box;
+	background-size: cover;
 	position: absolute;
-	overflow: hidden;
-	background-repeat: no-repeat;
+	overflow: clip;
 	filter: drop-shadow(0 2px 2px #000) drop-shadow(0 3px 4px #000);
 }
 
