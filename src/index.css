@@ -294,7 +294,7 @@ h2 {
 }
 
 .projCard {
-  filter: drop-shadow(0 2px 2px #000) drop-shadow(0 3px 4px #000);
+  filter: drop-shadow(0 2px 2px #000) drop-shadow(0 4px 8px #000);
 }
 
 .latest-sm .projCard {
@@ -471,7 +471,6 @@ h2 {
   animation-duration: 0.45s;
   animation-name: fadeIn;
 }
-
 
 .certInner {
   position: relative;

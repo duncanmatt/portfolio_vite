@@ -60,7 +60,6 @@ function LatestContent() {
 					))}
 				</div>
 			</div>
-			<div className='linkGH'>Checkout my <a href='https://github.com/duncanmatt'>GitHub</a> for more</div>
 		</>
 	);
 }
