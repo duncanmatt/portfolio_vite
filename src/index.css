@@ -230,7 +230,8 @@ h2 {
 
 .techStackWrapper {
 	display: grid;
-	grid-template-columns: minmax(0, 1fr);
+	grid-template-columns: minmax(0, 0.85fr);
+	justify-content: center;
 }
 
 .techStack {
@@ -509,10 +510,7 @@ h2 {
 	color: #fff;
 }
 
-@media (min-width: 600px) {
-	.briefAbout {
-		padding: 0 0 1rem 1rem;
-	}
+@media (min-width: 800px) {
 	.introContent {
 		grid-template-columns: repeat(2, minmax(0, 1fr));
 		grid-template-rows: minmax(0, 1fr) min-content;
@@ -534,33 +532,9 @@ h2 {
 	}
 }
 
-/* @media (min-width: 800px) {
-	.briefAbout {
-		font-size: 2rem;
-	}
-}
-
-@media (min-width: 1000px) {
-	.briefAbout {
-		font-size: 2rem;
-	}
-}
-
-@media (min-width: 1200px) {
-	.briefAbout {
-		font-size: 2rem;
-	}
-} */
-
 @media (min-width: 1600px) {
 	main {
 		max-width: 1600px;
 		margin-inline: auto;
 	}
 }
-
-/* @media (min-width: 2000px) {
-	.briefAbout {
-		font-size: 2rem;
-	}
-} */

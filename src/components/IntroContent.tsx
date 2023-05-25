@@ -11,7 +11,6 @@ function IntroContent() {
 			<div className='info'>
 				<span className='briefAbout'>{title}</span>
 				<Stack />
-				{/* <About /> */}
 			</div>
 			<div className='headshotWrapper'>
 				<picture>
