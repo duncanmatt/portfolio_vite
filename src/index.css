@@ -523,6 +523,12 @@ h2 {
 		justify-content: space-around;
 		flex: 1;
 	}
+  .briefAbout {
+    letter-spacing: 0.03em;
+    padding: 0;
+    text-align: center;
+    margin-inline: auto;
+  }
 	.techStack {
 		grid-row: 1 / span 2;
 	}
