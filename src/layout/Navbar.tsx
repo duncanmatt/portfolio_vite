@@ -136,7 +136,7 @@ function Navbar() {
 			),
 		},
 	];
-	const isMobile = useMediaQuery({ query: '(max-width: 600px)' });
+	const isMobile = useMediaQuery({ query: '(max-width: 800px)' });
 
 	return (
 		<header>
