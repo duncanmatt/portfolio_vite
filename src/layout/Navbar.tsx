@@ -25,25 +25,28 @@ function MobileHeader({ links }: Links) {
 
 	return (
 		<>
-			{menuOpen ? (
-				<div className='menuWrapper'>
-					<div className='menuUpperContent'>
+			<div className='mobileHeaderWrapper'>
+				<div className='mobileHeader'>
 					<div className='mobileHeaderName'>
-							<h1>
-								<img
-									className='headerLogo'
-									src={nameLogo}
-									alt='Matt Duncan'
-								/>
-							</h1>
-						</div>
-						<CloseIcon
-							onClick={showMenu}
-							fontSize='large'
-						/>
+						<h1>
+							<img
+								className='headerLogo'
+								src={nameLogo}
+								alt='Matt Duncan'
+							/>
+						</h1>
 					</div>
-					<div className='menuLowerContent'>
-						<span className='menuLinks'>
+					<div className='mobileNavActions'>
+						{menuOpen ? (
+							<CloseIcon onClick={showMenu} />
+						) : (
+							<MenuSharpIcon onClick={showMenu} />
+						)}
+					</div>
+				</div>
+				<div className='navMenu'>
+					<div className={menuOpen ? 'mobileMenuOpen' : 'mobileMenuClosed'}>
+						<nav className='menuLinks'>
 							{links.map(link => (
 								<a
 									key={link.id}
@@ -56,27 +59,10 @@ function MobileHeader({ links }: Links) {
 									<NavigateNextIcon style={{ alignSelf: 'flex-end' }} />
 								</a>
 							))}
-						</span>
+						</nav>
 					</div>
 				</div>
-			) : (
-				<div className='mobileHeaderWrapper'>
-					<div className='mobileHeader'>
-						<div className='mobileHeaderName'>
-							<h1>
-								<img
-									className='headerLogo'
-									src={nameLogo}
-									alt='Matt Duncan'
-								/>
-							</h1>
-						</div>
-						<div className='mobileNavActions'>
-							<MenuSharpIcon onClick={showMenu} />
-						</div>
-					</div>
-				</div>
-			)}
+			</div>
 		</>
 	);
 }

@@ -64,14 +64,16 @@ body {
 }
 
 header {
-  position: sticky;
-  top: 0;
+	position: sticky;
+	background-attachment: scroll;
+	top: 0;
+	box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.4);
 	display: block;
 	height: 60px;
-	max-width: 100%;
+	width: 100%;
 	color: #fff;
-	background-color: #2c2c2c;
-  z-index: 10;
+	background: #2c2c2c;
+	z-index: 10;
 }
 
 a {
@@ -109,12 +111,12 @@ h2 {
 }
 
 .mobileHeaderWrapper {
-	height: 60px;
 	display: flex;
+	flex-direction: column;
 }
 
 .mobileHeader {
-	flex-basis: 100%;
+	height: 60px;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
@@ -169,8 +171,22 @@ h2 {
 	color: var(--hover-color);
 }
 
-.menuWrapper {
-	position: relative;
+.navMenu {
+	display: block;
+	height: 100%;
+}
+
+.mobileMenuClosed {
+	width: 0;
+	display: none;
+}
+
+.mobileMenuOpen {
+	height: calc(100vh - 60px);
+	background-color: #f9f9f9;
+	padding-inline: 1rem;
+	display: flex;
+	flex-direction: column;
 }
 
 .menuUpperContent {
@@ -186,7 +202,7 @@ h2 {
 .menuLowerContent {
 	padding-inline: 1rem;
 	z-index: 10;
-  background-color: #f9f9f9; 
+	background-color: #f9f9f9;
 }
 
 .menuLink {
@@ -197,11 +213,11 @@ h2 {
 	font-size: 1.25rem;
 	letter-spacing: 0.1rem;
 	padding-block: 1rem;
-  color: #000;
+	color: #000;
 }
 
 .menuLink:hover {
-  color: #b4b4b4;
+	color: #b4b4b4;
 }
 
 .menuLink:not(:last-of-type) {
@@ -218,8 +234,8 @@ h2 {
 .introContent {
 	display: grid;
 	grid-template-rows: minmax(0, 1fr) min-content;
-	grid-template-columns: minmax(0, .85fr);
-  justify-content: center;
+	grid-template-columns: minmax(0, 0.85fr);
+	justify-content: center;
 	animation-name: introContentIn;
 	animation-duration: 0.5s;
 }
@@ -235,7 +251,7 @@ h2 {
 	font-size: clamp(2rem, 3vw + 1.5rem, 5rem);
 	font-weight: 400;
 	padding-block: 1rem;
-  text-align: center;
+	text-align: center;
 }
 
 .techStackWrapper {
@@ -533,12 +549,12 @@ h2 {
 		justify-content: space-around;
 		flex: 1;
 	}
-  .briefAbout {
-    letter-spacing: 0.03em;
-    padding: 0;
-    text-align: center;
-    margin-inline: auto;
-  }
+	.briefAbout {
+		letter-spacing: 0.03em;
+		padding: 0;
+		text-align: center;
+		margin-inline: auto;
+	}
 	.techStack {
 		grid-row: 1 / span 2;
 	}
