@@ -210,7 +210,8 @@ h2 {
 .introContent {
 	display: grid;
 	grid-template-rows: minmax(0, 1fr) min-content;
-	grid-template-columns: minmax(0, 1fr);
+	grid-template-columns: minmax(0, .85fr);
+  justify-content: center;
 	animation-name: introContentIn;
 	animation-duration: 0.5s;
 }
@@ -225,12 +226,13 @@ h2 {
 	color: #fff;
 	font-size: clamp(2rem, 3vw + 1.5rem, 5rem);
 	font-weight: 400;
-	padding: 1rem;
+	padding-block: 1rem;
+  text-align: center;
 }
 
 .techStackWrapper {
 	display: grid;
-	grid-template-columns: minmax(0, 0.85fr);
+	grid-template-columns: minmax(0, 1fr);
 	justify-content: center;
 }
 
