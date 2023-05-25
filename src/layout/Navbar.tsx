@@ -28,13 +28,15 @@ function MobileHeader({ links }: Links) {
 			{menuOpen ? (
 				<div className='menuWrapper'>
 					<div className='menuUpperContent'>
-						<h1 className='mobileHeaderName'>
-							<img
-								className='headerLogo'
-								src={nameLogo}
-								alt='Matt Duncan'
-							/>
-						</h1>
+					<div className='mobileHeaderName'>
+							<h1>
+								<img
+									className='headerLogo'
+									src={nameLogo}
+									alt='Matt Duncan'
+								/>
+							</h1>
+						</div>
 						<CloseIcon
 							onClick={showMenu}
 							fontSize='large'
