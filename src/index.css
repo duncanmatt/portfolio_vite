@@ -218,6 +218,10 @@ h2 {
 	border-bottom: 1px solid #121212;
 }
 
+.menuLinkContent {
+	line-height: 35px;
+}
+
 /* ---INTRO--- */
 .intro {
 	display: block;
@@ -522,10 +526,29 @@ h2 {
 	position: relative;
 	width: 100%;
 	display: flex;
-	flex-flow: column;
+	flex-direction: column;
 	text-align: center;
 	font-weight: 300;
 	color: #fff;
+}
+
+.footerLinks {
+	justify-content: center;
+	display: flex;
+	flex-flow: row nowrap;
+	gap: 1rem;
+}
+
+.footerLink {
+	appearance: none;
+}
+
+.footerLinkIcon {
+	color: #fff;
+}
+
+.footerLinkIcon:hover {
+ color: #b4b4b4;
 }
 
 @media (min-width: 800px) {
