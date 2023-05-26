@@ -141,6 +141,7 @@ h2 {
 	overflow-clip-margin: content-box;
 	max-height: 100%;
 	max-width: 100%;
+	/* z-index: 11; */
 }
 
 .desktopHeader {
@@ -176,31 +177,39 @@ h2 {
 	height: 100%;
 }
 
-.mobileMenuClosed {
-	display: none;
-	/* height: 0;
-	max-height: 0;
-	width: 100%; */
-	/* background: rgba(255, 255, 255, 0.1);
-	transition: background 0.4s linear, height 0.4s ease-in; */
+.navMenu > div {
+	transition: all 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+.navMenu .mobileMenuClosed {
+	height: 0;
+	padding: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	opacity: 0;
+	overflow-y: hidden;
+	z-index: -1;
+	background: transparent;
 }
 
 .mobileMenuClosed .menuLinks {
 	pointer-events: none;
+	opacity: 0;
 }
 
-.mobileMenuOpen {
+.navMenu .mobileMenuOpen {
+	opacity: 1;
 	height: calc(100vh - 60px);
 	padding-inline: 1rem;
-	/* display: flex;
-	flex-direction: column; */
 	display: block;
 	background: #2c2c2c;
-	transition: background 0.4s linear, height 0.4s ease-in 200ms;
 }
 
-.menuLinks {
-	transform: translateY(40%);
+.mobileMenuOpen .menuLinks {
+	opacity: 1;
+	display: flex;
+	flex-direction: column;
 }
 
 .menuLink {
@@ -548,7 +557,7 @@ h2 {
 }
 
 .footerLinkIcon:hover {
- color: #b4b4b4;
+	color: #b4b4b4;
 }
 
 @media (min-width: 800px) {
