@@ -125,14 +125,18 @@ h2 {
 }
 
 .mobileHeaderName {
-	flex-basis: 100%;
+	flex: 1;
 	display: block;
 	position: relative;
 	padding-inline: 0 2rem;
 }
 
+.mobileHeaderName > h1 {
+	display: flex;
+}
+
 .headerLogo {
-	height: 35px;
+	height: 30px;
 	line-height: 0;
 	font-size: 0;
 	overflow-clip-margin: content-box;
