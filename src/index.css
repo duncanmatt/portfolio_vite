@@ -9,6 +9,7 @@
 		rgba(255, 255, 255, 0.15),
 		rgba(255, 255, 255, 0)
 	);
+	--shadow: ilter: drop-shadow(0 2px 2px #000) drop-shadow(0 4px 8px #000) drop-shadow(0 16px 32px #000) ;
 	--ff-sans-serif: 'Jost', sans-serif;
 	--ff-display: 'Red Rose', cursive;
 }
@@ -66,7 +67,7 @@ header {
 	position: sticky;
 	background-attachment: scroll;
 	top: 0;
-	box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.4);
+	box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.04);
 	display: block;
 	height: 60px;
 	width: 100%;
@@ -151,9 +152,6 @@ h2 {
 }
 
 .desktopHeaderName {
-	font-family: var(--ff-display);
-	text-transform: uppercase;
-	font-weight: 600;
 	display: flex;
 	align-self: center;
 }
@@ -190,22 +188,6 @@ h2 {
 	padding-inline: 1rem;
 	display: flex;
 	flex-direction: column;
-}
-
-.menuUpperContent {
-	height: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	flex-direction: row;
-	padding-inline: 1rem;
-	font-size: 1.2em;
-}
-
-.menuLowerContent {
-	padding-inline: 1rem;
-	z-index: 10;
-	background-color: #f9f9f9;
 }
 
 .menuLink {
@@ -302,7 +284,7 @@ h2 {
 	background-size: cover;
 	position: absolute;
 	overflow: clip;
-	filter: drop-shadow(0 2px 2px #000) drop-shadow(0 3px 4px #000);
+	filter: drop-shadow(0 2px 2px #000) drop-shadow(0 4px 8px #000);
 }
 
 .latest {
@@ -478,7 +460,6 @@ h2 {
 		rgba(255, 255, 255, 0.25),
 		transparent
 	);
-	transform: skew(-20px);
 }
 
 .projCardGH {
