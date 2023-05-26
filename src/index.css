@@ -66,7 +66,7 @@ header {
 	position: sticky;
 	background-attachment: scroll;
 	top: 0;
-	box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.04);
+	box-shadow: 0px 0px 1px 0px #000;
 	display: block;
 	height: 60px;
 	width: 100%;
@@ -177,16 +177,30 @@ h2 {
 }
 
 .mobileMenuClosed {
-	width: 0;
 	display: none;
+	/* height: 0;
+	max-height: 0;
+	width: 100%; */
+	/* background: rgba(255, 255, 255, 0.1);
+	transition: background 0.4s linear, height 0.4s ease-in; */
+}
+
+.mobileMenuClosed .menuLinks {
+	pointer-events: none;
 }
 
 .mobileMenuOpen {
 	height: calc(100vh - 60px);
-	background-color: #f9f9f9;
 	padding-inline: 1rem;
-	display: flex;
-	flex-direction: column;
+	/* display: flex;
+	flex-direction: column; */
+	display: block;
+	background: #2c2c2c;
+	transition: background 0.4s linear, height 0.4s ease-in 200ms;
+}
+
+.menuLinks {
+	transform: translateY(40%);
 }
 
 .menuLink {
@@ -197,15 +211,11 @@ h2 {
 	font-size: 1.25rem;
 	letter-spacing: 0.1rem;
 	padding-block: 1rem;
-	color: #000;
-}
-
-.menuLink:hover {
 	color: #b4b4b4;
 }
 
 .menuLink:not(:last-of-type) {
-	border-bottom: 1px solid rgb(217, 217, 217);
+	border-bottom: 1px solid #121212;
 }
 
 /* ---INTRO--- */
@@ -509,7 +519,6 @@ h2 {
 }
 
 .footer {
-	/* margin-top: 2rem; */
 	position: relative;
 	width: 100%;
 	display: flex;
