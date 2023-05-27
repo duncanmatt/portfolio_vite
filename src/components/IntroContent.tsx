@@ -1,5 +1,4 @@
 import headshot from '../layout/assets/headshot.svg';
-import Stack from './Stack';
 
 function IntroContent() {
 	const title = `
@@ -10,8 +9,8 @@ function IntroContent() {
 		<div className='introContent'>
 			<div className='info'>
 				<span className='briefAbout'>{title}</span>
-				<Stack />
 			</div>
+			<figure>
 			<div className='headshotWrapper'>
 				<picture>
 					<img
@@ -21,6 +20,7 @@ function IntroContent() {
 					/>
 				</picture>
 			</div>
+			</figure>
 		</div>
 	);
 }

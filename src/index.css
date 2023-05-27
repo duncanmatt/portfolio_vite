@@ -249,8 +249,7 @@ h2 {
 .introContent {
 	display: grid;
 	grid-template-rows: minmax(0, 1fr) min-content;
-	grid-template-columns: minmax(0, 0.85fr);
-	justify-content: center;
+	grid-template-columns: minmax(0, 1fr);
 	animation-name: introContentIn;
 	animation-duration: 0.5s;
 }
@@ -258,15 +257,15 @@ h2 {
 .info {
 	grid-row: 2;
 	display: flex;
-	flex-direction: column;
+	justify-content: center;
+	margin-block: 2rem 3rem;
 }
 
 .briefAbout {
 	color: #fff;
 	font-size: clamp(2rem, 3vw + 1.5rem, 5rem);
 	font-weight: 400;
-	padding-block: 1rem;
-	text-align: start;
+	flex-basis: 75%;
 }
 
 .techStackWrapper {
@@ -278,20 +277,6 @@ h2 {
 .techStack {
 	display: flex;
 	flex-direction: column;
-}
-
-.wrapRow {
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: space-around;
-}
-
-.wrapRow:first-of-type {
-	justify-content: space-evenly;
-}
-
-.wrapRow:not(:last-of-type) {
-	margin-bottom: 1rem;
 }
 
 .langIcon {
@@ -576,16 +561,14 @@ h2 {
 		animation-duration: 0.5s;
 	}
 	.info {
-		grid-row: 1 / span 2;
+		grid-row: 1;
 		grid-column: 1;
-		justify-content: space-around;
-		flex: 1;
+		margin: auto;
 	}
 	.briefAbout {
+		flex-basis: 90%;
 		letter-spacing: 0.03em;
 		padding: 0;
-		text-align: center;
-		margin-inline: auto;
 	}
 	.techStack {
 		grid-row: 1 / span 2;
