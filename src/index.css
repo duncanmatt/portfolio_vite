@@ -124,10 +124,9 @@ h2 {
 }
 
 .mobileHeaderName {
-	flex: 1;
+	flex-basis: 65%;
 	display: block;
 	position: relative;
-	padding-inline: 0 2rem;
 }
 
 .mobileHeaderName > h1 {
