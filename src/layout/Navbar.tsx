@@ -12,7 +12,7 @@ type Link = {
 	id: number;
 	title: string;
 	url: string;
-	icon: JSX.Element;
+	icon?: JSX.Element;
 };
 
 type Links = {
@@ -53,9 +53,7 @@ function MobileHeader({ links }: Links) {
 									href={link.url}
 									className='menuLink'
 									onClick={showMenu}>
-									<div className='menuLinkContent'>
-										{link.icon} {link.title}
-									</div>
+									<div className='menuLinkContent'>{link.title}</div>
 									<NavigateNextIcon style={{ alignSelf: 'flex-end' }} />
 								</a>
 							))}
@@ -83,7 +81,7 @@ function DesktopHeader({ links }: Links) {
 						key={link.id}
 						href={link.url}
 						className='navLink'>
-						{link.icon}
+						{link.icon ? link.icon : link.title}
 					</a>
 				))}
 			</span>
@@ -95,6 +93,11 @@ function Navbar() {
 	const links = [
 		{
 			id: 0,
+			title: 'Resume',
+			url: 'https://docs.google.com/document/d/148KYcqKCQsYdE5j5iZb6p0FrsT0G4pqw74puKjrwgJM/edit?usp=sharing',
+		},
+		{
+			id: 1,
 			title: 'Linkedin',
 			url: 'https://linkedin.com/in/matt-duncan-601997268',
 			icon: (
@@ -104,7 +107,7 @@ function Navbar() {
 			),
 		},
 		{
-			id: 1,
+			id: 2,
 			title: 'GitHub',
 			url: 'https://github.com/duncanmatt',
 			icon: (
@@ -114,7 +117,7 @@ function Navbar() {
 			),
 		},
 		{
-			id: 2,
+			id: 3,
 			title: 'Reddit',
 			url: 'https://www.reddit.com/user/marriedtomdn',
 			icon: (

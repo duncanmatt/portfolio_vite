@@ -162,13 +162,19 @@ h2 {
 	justify-content: space-evenly;
 }
 
-.right > a {
+.navLink {
 	display: flex;
 	align-items: center;
 	color: #fff;
 }
 
-.right > a:hover {
+.navLink:first-of-type {
+	text-transform: uppercase;
+	letter-spacing: 0.1rem;
+	line-height: 35px;
+}
+
+.navLink:hover {
 	color: var(--hover-color);
 }
 
@@ -209,26 +215,35 @@ h2 {
 .mobileMenuOpen .menuLinks {
 	opacity: 1;
 	display: flex;
+	height: 60%;
 	flex-direction: column;
+	justify-content: space-evenly;
+	transform: translateY(1rem);
 }
 
 .menuLink {
 	display: flex;
 	flex-flow: row nowrap;
 	justify-content: space-between;
-	font-weight: 600;
-	font-size: 1.25rem;
+	font-weight: 400;
+	font-size: 1.45rem;
 	letter-spacing: 0.1rem;
-	padding-block: 1rem;
 	color: #b4b4b4;
+	transition: all 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
+	line-height: 1.875rem;
+	align-items: center;
 }
 
-.menuLink:not(:last-of-type) {
-	border-bottom: 1px solid #121212;
-}
+/* .menuLink:first-of-type {
+	text-transform: uppercase;
+	letter-spacing: 0.125rem;
+} */
 
 .menuLinkContent {
-	line-height: 35px;
+	line-height: 1.85rem;
+	display: flex;
+	/* align-items: center; */
+	gap: 0.5rem;
 }
 
 /* ---INTRO--- */
