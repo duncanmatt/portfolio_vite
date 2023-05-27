@@ -248,14 +248,14 @@ h2 {
 
 .introContent {
 	display: grid;
-	grid-template-rows: minmax(0, 1fr) min-content;
+	grid-template-rows: min-content minmax(0, 1fr);
 	grid-template-columns: minmax(0, 1fr);
 	animation-name: introContentIn;
 	animation-duration: 0.5s;
 }
 
 .info {
-	grid-row: 2;
+	grid-row: 1;
 	display: flex;
 	justify-content: center;
 	margin-block: 2rem 3rem;
@@ -265,7 +265,8 @@ h2 {
 	color: #fff;
 	font-size: clamp(2rem, 3vw + 1.5rem, 5rem);
 	font-weight: 400;
-	flex-basis: 75%;
+	flex-basis: 90%;
+	text-align: center;
 }
 
 .techStackWrapper {
@@ -285,7 +286,7 @@ h2 {
 }
 
 .headshotWrapper {
-	grid-row: 1;
+	grid-row: 2;
 	display: block;
 	max-width: 100%;
 	position: relative;
