@@ -54,7 +54,7 @@ function MobileHeader({ links }: Links) {
 									className='menuLink'
 									onClick={showMenu}>
 									<div className='menuLinkContent'>{link.title}</div>
-									<NavigateNextIcon style={{ alignSelf: 'flex-end' }} />
+									<NavigateNextIcon style={{ alignSelf: 'center' }} />
 								</a>
 							))}
 						</nav>
