@@ -50,7 +50,6 @@ function LatestContent() {
 	return (
 		<>
 			<div className={isLarge ? 'latest-lg' : 'latest-sm'}>
-				<h2>Recent Work</h2>
 				<div className='latestCards'>
 					{items.map(item => (
 						<ProjectCard
