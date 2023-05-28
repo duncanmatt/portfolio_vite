@@ -494,19 +494,34 @@ h2 {
 	position: relative;
 }
 
-.skillIconsWrapper {
-	display: block;
-	padding-block: 1rem;
+.skillItemsWrapper {
+	display: flex;
+	flex: 0;
+	height: 20em;
 }
 
-.skillIconsWrapper > ul {
+.skillItemsWrapper > ul {
 	display: flex;
 	justify-content: center;
 	flex-flow: row wrap;
+	margin: auto;
 	gap: 2rem;
 }
 
-.skillIconOuter {
+.skillItems .skillIcon {
+	width: 3em;
+	height: 3em;
+}
+
+.skillItemsLg {
+	padding-inline: 3em;
+}
+
+.skillItems {
+	padding-inline: 1em;
+}
+
+.skillItemOuter {
 	flex: 0;
 	display: block;
 	border: 1px solid #000;
@@ -515,17 +530,9 @@ h2 {
 	padding: 1rem;
 }
 
-.skillIconInner {
-	width: 3em;
-	height: 3em;
-}
-
-.skillIconsLg {
-	padding-inline: 3em;
-}
-
-.skillIcons {
-	padding-inline: 1em;
+.skillIcon {
+	width: 4.5em;
+	height: 4.5em;
 }
 
 /* --CERTIFIED--- */
