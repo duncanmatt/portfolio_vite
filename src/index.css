@@ -309,23 +309,23 @@ h2 {
 	padding-block: 1rem;
 }
 
-.latest-lg {
+.latestLg {
 	display: block;
 	padding-block: 1rem;
 }
 
-.latest-sm {
+.latestSm {
 	padding-block: 1rem;
 }
 
-.latest-lg .latestCards {
+.latestLg .latestCards {
 	display: grid;
 	grid-template-columns: repeat(2, minmax(0, 1fr));
 	padding: 1.85rem 1rem;
 	gap: 3rem 2rem;
 }
 
-.latest-sm .latestCards {
+.latestSm .latestCards {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -344,7 +344,7 @@ h2 {
 	filter: drop-shadow(0 2px 2px #000) drop-shadow(0 4px 8px #000);
 }
 
-.latest-sm .projCard {
+.latestSm .projCard {
 	flex: 0;
 	font-weight: 500;
 	height: 100%;
@@ -353,17 +353,17 @@ h2 {
 	-webkit-box-direction: normal;
 }
 
-.latest-sm .projCard:not(:last-child) {
+.latestSm .projCard:not(:last-child) {
 	margin-bottom: 50px;
 }
 
-.latest-lg .projCard {
+.latestLg .projCard {
 	display: grid;
 	justify-content: center;
 	grid-template-columns: minmax(0, 1fr);
 }
 
-.latest-lg .projCardInner {
+.latestLg .projCardInner {
 	display: flex;
 	flex-direction: column;
 }

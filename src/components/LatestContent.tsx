@@ -49,7 +49,7 @@ function LatestContent() {
 
 	return (
 		<>
-			<div className={isLarge ? 'latest-lg' : 'latest-sm'}>
+			<div className={isLarge ? 'latestLg' : 'latestSm'}>
 				<div className='latestCards'>
 					{items.map(item => (
 						<ProjectCard

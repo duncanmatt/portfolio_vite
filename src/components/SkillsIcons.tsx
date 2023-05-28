@@ -1,9 +1,16 @@
 import expressWhite from '../layout/assets/expressWhite.svg';
+import { useMediaQuery } from 'react-responsive';
 
 const SkillsIcons = () => {
+	const isLarge = useMediaQuery({
+		query: '(min-width: 800px)',
+		minDeviceWidth: 800,
+		type: 'screen',
+	})
+
 	return (
 		<div className='skillIconsWrapper'>
-			<ul className='skillIcons'>
+			<ul className={isLarge ? 'skillIconsLg' : 'skillIcons'}>
 					<li className='skillIconOuter'>
 						<img
 							className='skillIconInner'
