@@ -495,44 +495,61 @@ h2 {
 }
 
 .skillItemsWrapper {
-	display: flex;
-	flex: 0;
-	height: 20em;
+	display: block;
+	margin-block: 2rem;
 }
 
 .skillItemsWrapper > ul {
-	display: flex;
-	justify-content: center;
-	flex-flow: row wrap;
-	margin: auto;
-	gap: 2rem;
+	display: grid;
+	gap: 1rem;
 }
 
-.skillItems .skillIcon {
-	width: 3em;
-	height: 3em;
+.skillItemsWrapper .skillItems {
+	padding-inline: 1rem;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	grid-template-rows: repeat(5, minmax(0, 1fr));
 }
 
-.skillItemsLg {
-	padding-inline: 3em;
-}
-
-.skillItems {
-	padding-inline: 1em;
+.skillItemsWrapper .skillItemsLg {
+	padding-inline: 2rem;
+	grid-template-columns: repeat(4, minmax(0, 1fr));
+	grid-template-rows: repeat(3, minmax(0, 1fr));
 }
 
 .skillItemOuter {
-	flex: 0;
 	display: block;
 	border: 1px solid #000;
 	border-radius: 1.25rem;
 	background-color: #1c1c1c;
-	padding: 1rem;
+	padding-block: 1rem 2rem;
+}
+
+.skillItemInner {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr);
+	grid-template-rows: repeat(2, minmax(0, 1fr));
+}
+
+.skillName {
+	padding-block: 1rem;
+	letter-spacing: 0.1em;
+	text-align: center;
+	color: #fff;
+}
+
+.skillIconWrapper {
+	flex-basis: 100%;
+	margin-inline: auto;
 }
 
 .skillIcon {
 	width: 4.5em;
 	height: 4.5em;
+}
+
+.skillItems .skillIcon {
+	width: 3.5em;
+	height: 3.5em;
 }
 
 /* --CERTIFIED--- */
@@ -606,6 +623,13 @@ h2 {
 	color: #b4b4b4;
 }
 
+@media (min-width: 500px) {
+	.skillItemsWrapper .skillItems {
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		grid-template-rows: repeat(4, minmax(0, 1fr));
+	}
+}
+
 @media (min-width: 800px) {
 	.introContent {
 		grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -629,6 +653,12 @@ h2 {
 	.headshotWrapper {
 		grid-column: 2;
 		grid-row: 1 / span 2;
+	}
+}
+
+@media (min-width: 1200px) {
+	.skillItemsWrapper .skillItemsLg {
+		gap: 1.65em;
 	}
 }
 
