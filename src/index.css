@@ -303,10 +303,11 @@ h2 {
 	filter: drop-shadow(0 2px 2px #000) drop-shadow(0 4px 8px #000);
 }
 
+/* ---LATEST--- */
 .latest {
 	position: relative;
 	display: block;
-	padding-block: 1rem;
+	padding-block: 2rem;
 }
 
 .latestLg {
@@ -486,9 +487,55 @@ h2 {
 	color: #b4b4b4;
 }
 
+/* ---SKILLS--- */
+.skills {
+	padding-block: 2rem;
+	display: block;
+	position: relative;
+}
+
+.skillIconsWrapper {
+	display: block;
+	padding-block: 1rem;
+}
+
+.skillIconsWrapper > ul {
+	display: flex;
+	justify-content: center;
+	flex-flow: row wrap;
+	gap: 2rem;
+}
+
+.skillIconOuter {
+	flex: 0;
+	display: block;
+	border: 1px solid #000;
+	border-radius: 1.25rem;
+	background-color: #1c1c1c;
+	padding: 1rem;
+}
+
+.skillIconInner {
+	width: 3em;
+	height: 3em;
+}
+
+.skillIconsLg {
+	padding-inline: 3em;
+}
+
+
+.skillIcons {
+	padding-inline: 1em;
+}
+
+
+/* --CERTIFIED--- */
 .certified {
 	padding-block: 2rem;
-	min-height: 100vh;
+	/* min-height: 100vh; */
+	display: block;
+	position: relative;
 }
 
 .certified .certifications {
