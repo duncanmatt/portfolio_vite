@@ -517,14 +517,15 @@ h2 {
 }
 
 .skillItemOuter {
+	position: relative;
 	display: block;
 	border: 1px solid #000;
 	border-radius: 1.25rem;
 	background-color: #1c1c1c;
-	padding-block: 1rem 2rem;
 }
 
 .skillItemInner {
+	padding-block: 1rem 2rem;
 	display: grid;
 	grid-template-columns: minmax(0, 1fr);
 	grid-template-rows: repeat(2, minmax(0, 1fr));
