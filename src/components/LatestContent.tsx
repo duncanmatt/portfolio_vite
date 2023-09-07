@@ -28,7 +28,7 @@ function LatestContent() {
     {
       id: 2,
       title: 'BLACK SHEEP WORLD',
-      desc: 'Website made using the MERN stack for my friend in the process of starting a clothing brand.',
+      desc: 'Ecommerce web app built with Next.js which utilizes lambda functions to efficiently perform crucial functionality.',
       pic: 'https://d1suwrqf4r82dt.cloudfront.net/ecommPreview.webp',
       url: 'https://dev.d2ev7e5869alah.amplifyapp.com',
       urlGH: 'https://github.com/duncanmatt/ecomm_next',
