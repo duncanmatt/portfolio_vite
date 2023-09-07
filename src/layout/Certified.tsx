@@ -12,7 +12,7 @@ function Certified() {
 			id: 2,
 			pic: 'https://d1suwrqf4r82dt.cloudfront.net/ccpAWSCert.webp',
 			desc: 'Was inspired to learn a programming language after having fun playing around with HTML/CSS.',
-			url: 'https://www.coursera.org/account/accomplishments/verify/867P3BDJHCMP',
+			url: 'https://aws.amazon.com/verification',
 		},
 		{
 			id: 3,

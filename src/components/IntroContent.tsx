@@ -1,5 +1,3 @@
-import headshot from '../layout/assets/headshot.svg';
-
 function IntroContent() {
 	const title = `
     Hello! I'm Matt Duncan, self-taught developer from northern Virginia.
@@ -11,15 +9,15 @@ function IntroContent() {
 				<span className='briefAbout'>{title}</span>
 			</div>
 			<figure>
-			<div className='headshotWrapper'>
-				<picture>
-					<img
-						className='headshot'
-						src={headshot}
-						alt='Matt Duncan'
-					/>
-				</picture>
-			</div>
+				<div className='headshotWrapper'>
+					<picture>
+						<img
+							className='headshot'
+							src='https://d1suwrqf4r82dt.cloudfront.net/mugshotBlk.webp'
+							alt='Matt Duncan'
+						/>
+					</picture>
+				</div>
 			</figure>
 		</div>
 	);
