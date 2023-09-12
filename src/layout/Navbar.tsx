@@ -78,6 +78,7 @@ function DesktopHeader({ links }: Links) {
 			<span className='right'>
 				{links.map(link => (
 					<a
+						target='_blank'
 						key={link.id}
 						href={link.url}
 						className='navLink'>
