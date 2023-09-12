@@ -44,8 +44,11 @@ function MobileHeader({ links }: Links) {
 						)}
 					</div>
 				</div>
-				<div className='navMenu'>
-					<div className={menuOpen ? 'mobileMenuOpen' : 'mobileMenuClosed'}>
+				<div
+					className={`navMenu ${
+						menuOpen ? 'mobileMenuOpen' : 'mobileMenuClosed'
+					}`}>
+					<div className='navInner'>
 						<nav className='menuLinks'>
 							{links.map(link => (
 								<a
