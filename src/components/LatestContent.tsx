@@ -11,7 +11,7 @@ function LatestContent() {
   const items = [
     {
       id: 0,
-      title: 'Fantasy Football Auxiliary',
+      title: 'FANTASY FOOTBALL AUXILIARY',
       desc: 'Web app made with Next.js which consolidates necessary information for efficient draft research.',
       pic: 'https://d1suwrqf4r82dt.cloudfront.net/ffPreview.webp',
       url: 'https://ffauxiliary.com',

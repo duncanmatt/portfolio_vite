@@ -11,7 +11,11 @@ const SkillsIcons = () => {
     <div className='skillItemsWrapper'>
       <ul className={isLarge ? 'skillItemsLg' : 'skillItems'}>
         <li className='skillItemOuter'>
-          <div className='skillItemInner'>
+          <a
+            target='_blank'
+            href='https://html.spec.whatwg.org'
+            className='skillItemInner'
+          >
             <span className='skillName'>HTML</span>
             <span className='skillIconWrapper'>
               <img
@@ -22,10 +26,14 @@ const SkillsIcons = () => {
                 alt='HTML5'
               />
             </span>
-          </div>
+          </a>
         </li>
         <li className='skillItemOuter'>
-          <div className='skillItemInner'>
+          <a
+            target='_blank'
+            href='https://www.w3.org/TR/CSS/#css'
+            className='skillItemInner'
+          >
             <span className='skillName'>CSS</span>
             <span className='skillIconWrapper'>
               <img
@@ -34,10 +42,14 @@ const SkillsIcons = () => {
                 alt='CSS3'
               />
             </span>
-          </div>
+          </a>
         </li>
         <li className='skillItemOuter'>
-          <div className='skillItemInner'>
+          <a
+            target='_blank'
+            href='https://developer.mozilla.org/en-US/docs/Web/JavaScript'
+            className='skillItemInner'
+          >
             <span className='skillName'>JavaScript</span>
             <span className='skillIconWrapper'>
               <img
@@ -46,10 +58,14 @@ const SkillsIcons = () => {
                 alt='JavaScript'
               />
             </span>
-          </div>
+          </a>
         </li>
         <li className='skillItemOuter'>
-          <div className='skillItemInner'>
+          <a
+            target='_blank'
+            href='https://figma.com'
+            className='skillItemInner'
+          >
             <span className='skillName'>Figma</span>
             <span className='skillIconWrapper'>
               <img
@@ -58,10 +74,14 @@ const SkillsIcons = () => {
                 alt='Figma'
               />
             </span>
-          </div>
+          </a>
         </li>
         <li className='skillItemOuter'>
-          <div className='skillItemInner'>
+          <a
+            target='_blank'
+            href='https://github.com'
+            className='skillItemInner'
+          >
             <span className='skillName'>Git</span>
             <span className='skillIconWrapper'>
               <img
@@ -70,10 +90,14 @@ const SkillsIcons = () => {
                 alt='Git'
               />
             </span>
-          </div>
+          </a>
         </li>
         <li className='skillItemOuter'>
-          <div className='skillItemInner'>
+          <a
+            target='_blank'
+            href='https://react.dev'
+            className='skillItemInner'
+          >
             <span className='skillName'>React</span>
             <span className='skillIconWrapper'>
               <img
@@ -82,10 +106,14 @@ const SkillsIcons = () => {
                 alt='React'
               />
             </span>
-          </div>
+          </a>
         </li>
         <li className='skillItemOuter'>
-          <div className='skillItemInner'>
+          <a
+            target='_blank'
+            href='https://nodejs.org/en'
+            className='skillItemInner'
+          >
             <span className='skillName'>Node.js</span>
             <span className='skillIconWrapper'>
               <img
@@ -94,10 +122,14 @@ const SkillsIcons = () => {
                 alt='Node.js'
               />
             </span>
-          </div>
+          </a>
         </li>
         <li className='skillItemOuter'>
-          <div className='skillItemInner'>
+          <a
+            target='_blank'
+            href='https://www.mongodb.com'
+            className='skillItemInner'
+          >
             <span className='skillName'>MongoDB</span>
             <span className='skillIconWrapper'>
               <img
@@ -106,10 +138,14 @@ const SkillsIcons = () => {
                 alt='MongoDB'
               />
             </span>
-          </div>
+          </a>
         </li>
         <li className='skillItemOuter'>
-          <div className='skillItemInner'>
+          <a
+            target='_blank'
+            href='https://redux.js.org'
+            className='skillItemInner'
+          >
             <span className='skillName'>Redux</span>
             <span className='skillIconWrapper'>
               <img
@@ -118,10 +154,14 @@ const SkillsIcons = () => {
                 alt='Redux'
               />
             </span>
-          </div>
+          </a>
         </li>
         <li className='skillItemOuter'>
-          <div className='skillItemInner'>
+          <a
+            target='_blank'
+            href='https://aws.amazon.com'
+            className='skillItemInner'
+          >
             <span className='skillName'>AWS</span>
             <span className='skillIconWrapper'>
               <img
@@ -130,10 +170,14 @@ const SkillsIcons = () => {
                 src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg'
               />
             </span>
-          </div>
+          </a>
         </li>
         <li className='skillItemOuter'>
-          <div className='skillItemInner'>
+          <a
+            target='_blank'
+            href='https://www.typescriptlang.org'
+            className='skillItemInner'
+          >
             <span className='skillName'>TypeScript</span>
             <span className='skillIconWrapper'>
               <img
@@ -142,10 +186,14 @@ const SkillsIcons = () => {
                 alt='TypeScript'
               />
             </span>
-          </div>
+          </a>
         </li>
         <li className='skillItemOuter'>
-          <div className='skillItemInner'>
+          <a
+            target='_blank'
+            href='https://nextjs.org'
+            className='skillItemInner'
+          >
             <span className='skillName'>Next.js</span>
             <span className='skillIconWrapper'>
               <svg
@@ -160,7 +208,7 @@ const SkillsIcons = () => {
                 <path d='M78.6 73.3l7.5 11.3V41.8h-7.5z'></path>
               </svg>
             </span>
-          </div>
+          </a>
         </li>
       </ul>
     </div>
