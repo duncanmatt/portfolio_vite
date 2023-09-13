@@ -228,6 +228,14 @@ h2 {
   justify-content: space-evenly;
 }
 
+.navLink:first-of-type {
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  line-height: 1.875rem;
+}
+
+.navLink,
 .menuLink {
   display: flex;
   flex-flow: row nowrap;
