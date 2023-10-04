@@ -179,44 +179,80 @@ h2 {
 }
 
 .navMenu {
-  transition: all 0.3s ease-in-out;
+  transition: left 0.3s ease-in-out;
   background-attachment: scroll;
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-}
-
-.mobileMenuClosed {
-  height: 0;
-  padding: 0;
-  position: absolute;
-  top: 60px;
-  width: 100%;
-  opacity: 0;
-  overflow-y: hidden;
-  pointer-events: none;
-  z-index: 0;
-}
-
-.mobileMenuClosed .menuLinks {
-  pointer-events: none;
-  opacity: 0;
-}
-
-.mobileMenuOpen {
-  opacity: 1;
-  height: calc(100vh - 60px);
-  padding-inline: 1rem;
-  display: block;
-  overflow-y: auto;
   background-color: rgba(0, 0, 0, 0.04);
   background-origin: padding-box;
   backdrop-filter: blur(150px) saturate(1.8);
   -webkit-backdrop-filter: blur(150px) saturate(1.8);
+  position: fixed;
+  top: 60px;
+  pointer-events: auto;
+  height: calc(100vh - 60px);
+  width: 100%;
+}
+
+.mobileMenuClosed {
+  left: 100%;
+  pointer-events: none;
+}
+
+.mobileMenuOpen {
+  left: 0;
+  pointer-events: auto;
+}
+
+.menuToggle {
+  position: relative;
+  appearance: none;
+  padding: 10px;
+  border: none;
+  background: none;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.menuToggle:before,
+.menuToggle:after {
+  position: absolute;
+  display: block;
+  content: '';
+  background: #fff;
+  width: 25px;
+  height: 2px;
+  left: 2px;
+  right: 2px;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  -webkit-transform-origin: center center;
+  transform-origin: center center;
+}
+
+.menuToggle:before {
+  top: 10px;
+}
+
+.menuToggle:after {
+  bottom: 10px;
+}
+
+.menuToggle[data-open='true']:before {
+  top: 14px;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.menuToggle[data-open='true']:after {
+  bottom: 14px;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
 
 .navInner {
   height: 100%;
   padding-top: 30px;
+  padding-inline: 1rem;
 }
 
 .mobileMenuOpen .menuLinks {
