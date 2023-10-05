@@ -225,7 +225,7 @@ h2 {
 }
 
 .navMenu {
-  transition: left 0.3s ease-in-out;
+  transition: left 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
   background-attachment: scroll;
   background-color: rgba(0, 0, 0, 0.04);
   background-origin: padding-box;
@@ -262,11 +262,18 @@ h2 {
 .menuLink {
   display: flex;
   flex-flow: row nowrap;
-  justify-content: space-between;
+  justify-content: end;
   color: #fff;
-  transition: all 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
   align-items: center;
   margin-bottom: 28px;
+}
+
+/* .mobilMenuClosed > .navInner > .menuLinks > .menuLink {
+  justify-content: end;
+} */
+
+.mobileMenuOpen > .navInner > .menuLinks > .menuLink {
+  justify-content: space-between;
 }
 
 .menuLinkContent:hover,
