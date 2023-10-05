@@ -6,18 +6,21 @@ import Certified from './layout/Certified';
 import Footer from './layout/Footer';
 
 function App() {
-	return (
-		<>
-			<Navbar />
-			<main>
-				<Intro />
-				<Latest />
-				<Skills />
-				<Certified />
-			</main>
-			<Footer />
-		</>
-	);
+  return (
+    <>
+      <a id='skipNav' href='#content'>
+        Skip to main content
+      </a>
+      <Navbar />
+      <main id='content'>
+        <Intro />
+        <Latest />
+        <Skills />
+        <Certified />
+      </main>
+      <Footer />
+    </>
+  );
 }
 
 export default App;
