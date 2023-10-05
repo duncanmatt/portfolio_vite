@@ -79,7 +79,8 @@ a {
 	text-decoration: none;
 }
 
-ul {
+ul,
+menu {
 	list-style: none;
 	margin: 0;
 	padding: 0;
@@ -226,13 +227,13 @@ h2 {
 
 .navMenu {
 	transition: left 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
-	background-attachment: scroll;
-	background-color: rgba(0, 0, 0, 0.04);
-	background-origin: padding-box;
+	background-color: rgba(0, 0, 0, 0.14);
 	backdrop-filter: blur(150px) saturate(1.8);
 	-webkit-backdrop-filter: blur(150px) saturate(1.8);
 	position: fixed;
 	top: 60px;
+	bottom: 0;
+	right: 0;
 	height: 100%;
 	width: 100%;
 	overflow-x: hidden;
@@ -250,8 +251,13 @@ h2 {
 
 .navInner {
 	height: calc(100vh - 60px);
-	padding-top: 30px;
+	padding-top: 4.5rem;
 	padding-inline: 1rem;
+	background-attachment: scroll;
+	background-origin: padding-box;
+	background-clip: border-box;
+	background-repeat: repeat;
+	background-size: auto;
 }
 
 .menuLinks {
@@ -261,7 +267,7 @@ h2 {
 }
 
 .menuLink {
-	display: block;
+	display: inline-block;
 	margin-bottom: 24px;
 }
 
@@ -269,29 +275,35 @@ h2 {
 	display: flex;
 	flex-flow: row nowrap;
 	justify-content: space-between;
-	opacity: 0;
-	color: #c1c1c1;
 	align-items: center;
 	padding-block: 8px;
+	line-height: 90%;
+}
+
+.menuLinkTitle {
 	transition: opacity 0.3s ease-in;
 }
 
-.mobileMenuOpen > .navInner > .menuLinks > .menuLink > .menuLinkContent {
+.menuLinkTitle {
+	text-transform: uppercase;
+	font-weight: 400;
+	font-size: 2.24rem;
+	color: #e3e3e3;
+	opacity: 0;
+}
+
+.mobileMenuOpen
+	> .navInner
+	> .menuLinks
+	> .menuLink
+	> .menuLinkContent
+	> .menuLinkTitle {
 	opacity: 1;
 }
 
-.menuLinkContent:hover,
-.menuLinkContent:active {
+.menuLinkTitle:active,
+.menuLinkTitle:hover {
 	color: #fff;
-	font-weight: 400;
-}
-
-.menuLinkContent {
-	text-transform: uppercase;
-	font-weight: 300;
-	font-size: 1.32rem;
-	line-height: 1rem;
-	letter-spacing: 0.125rem;
 }
 
 /* ---INTRO--- */

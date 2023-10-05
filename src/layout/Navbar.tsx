@@ -3,10 +3,7 @@ import { useMediaQuery } from 'react-responsive';
 import RedditIcon from '@mui/icons-material/Reddit';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
-// import MenuSharpIcon from '@mui/icons-material/MenuSharp';
-// import CloseIcon from '@mui/icons-material/Close';
 import nameLogo from './assets/nameLogo.svg';
-import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 
 type Link = {
 	id: number;
@@ -49,8 +46,8 @@ function MobileHeader({ links }: Links) {
 					className={`navMenu ${
 						menuOpen ? 'mobileMenuOpen' : 'mobileMenuClosed'
 					}`}>
-					<div className='navInner'>
-						<ul className='menuLinks'>
+					<nav className='navInner'>
+						<menu className='menuLinks'>
 							{links.map(link => (
 								<li
 									key={link.id}
@@ -59,13 +56,12 @@ function MobileHeader({ links }: Links) {
 										href={link.url}
 										onClick={showMenu}
 										className='menuLinkContent'>
-										<span>{link.title}</span>
-										<NavigateNextIcon style={{ alignSelf: 'center' }} />
+										<span className='menuLinkTitle'>{link.title}</span>
 									</a>
 								</li>
 							))}
-						</ul>
-					</div>
+						</menu>
+					</nav>
 				</div>
 			</div>
 		</>
@@ -74,7 +70,7 @@ function MobileHeader({ links }: Links) {
 
 function DesktopHeader({ links }: Links) {
 	return (
-		<div className='desktopHeader'>
+		<nav className='desktopHeader'>
 			<h1 className='desktopHeaderName'>
 				<img
 					className='headerLogo'
@@ -93,7 +89,7 @@ function DesktopHeader({ links }: Links) {
 					</a>
 				))}
 			</span>
-		</div>
+		</nav>
 	);
 }
 
