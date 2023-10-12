@@ -130,6 +130,14 @@ h2 {
   font-weight: 300;
 }
 
+section > div {
+  padding-inline: 1rem;
+}
+
+section > div > div {
+  margin-bottom: 1rem;
+}
+
 .mobileHeaderWrapper {
   display: flex;
   flex-direction: column;
@@ -167,7 +175,7 @@ h2 {
 }
 
 .headerLogo {
-  height: 26px;
+  height: 25px;
   line-height: 0;
   font-size: 0;
   overflow-clip-margin: content-box;
@@ -587,7 +595,6 @@ h2 {
 
 .skillItemsWrapper {
   display: block;
-  margin-block: 2rem;
 }
 
 .skillItemsWrapper > ul {
@@ -596,9 +603,8 @@ h2 {
 }
 
 .skillItemsWrapper .skillItems {
-  padding-inline: 1rem;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  grid-template-rows: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-rows: repeat(3, minmax(0, 1fr));
 }
 
 .skillItemsWrapper .skillItemsLg {
@@ -617,33 +623,29 @@ h2 {
 }
 
 .skillItemInner {
-  padding-block: 1rem 2rem;
   display: grid;
   grid-template-columns: minmax(0, 1fr);
   grid-template-rows: repeat(2, minmax(0, 1fr));
+  margin-bottom: 1rem;
 }
 
 .skillName {
-  padding-block: 1rem;
-  letter-spacing: 0.1em;
+  margin-top: 1.45rem;
+  letter-spacing: 0.1rem;
   text-align: center;
   color: #fff;
   text-transform: uppercase;
 }
 
 .skillIconWrapper {
-  flex-basis: 100%;
+  height: 100%;
   margin-inline: auto;
 }
 
 .skillIcon {
   width: 4.5em;
   height: 4.5em;
-}
-
-.skillItems .skillIcon {
-  width: 3.5em;
-  height: 3.5em;
+  /* margin-bottom: 0.875rem; */
 }
 
 /* --CERTIFIED--- */

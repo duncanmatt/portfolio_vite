@@ -24,8 +24,12 @@ const certs = [
 const Certified = () => {
   return (
     <section id='certified' className='certified'>
-      <h2>Certified</h2>
-      <Certifications certs={certs} />
+      <div>
+        <div>
+          <h2>Certified</h2>
+        </div>
+        <Certifications certs={certs} />
+      </div>
     </section>
   );
 };

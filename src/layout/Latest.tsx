@@ -4,9 +4,11 @@ const Latest = () => {
   return (
     <section id='latest' className='latest'>
       <div>
-        <h2>Recent Work</h2>
+        <div>
+          <h2>Recent Work</h2>
+        </div>
+        <LatestContent />
       </div>
-      <LatestContent />
     </section>
   );
 };

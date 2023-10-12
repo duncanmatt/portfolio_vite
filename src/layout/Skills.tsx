@@ -4,9 +4,11 @@ const Skills = () => {
   return (
     <section id='skills' className='skills'>
       <div>
-        <h2>Skills</h2>
+        <div>
+          <h2>Skills</h2>
+        </div>
+        <SkillsIcons />
       </div>
-      <SkillsIcons />
     </section>
   );
 };
