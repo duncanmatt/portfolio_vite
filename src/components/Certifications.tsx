@@ -1,4 +1,7 @@
 import CertCard from './CertCard';
+import { useMediaQuery } from 'react-responsive';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
 
 type Certification = {
   id: number;
@@ -11,50 +14,29 @@ type Certifications = {
   certs: Array<Certification>;
 };
 
-// const reveal = () => {
-//   const certs = document.querySelectorAll('.cert');
-//   for (let i = 0; i < certs.length; i++) {
-//     const windowHeight = window.innerHeight;
-//     const elementTop = certs[i].getBoundingClientRect().top;
-//     const elementVisible = 150;
-//     if (elementTop < windowHeight - elementVisible) {
-//       certs[i].classList.remove('hidden');
-//       certs[i].classList.add('shown');
-//     } else {
-//       certs[i].classList.remove('shown');
-//       certs[i].classList.add('hidden');
-//     }
-//   }
-// };
-// window.addEventListener('scroll', reveal);
-// reveal();
-
-function Certifications({ certs }: Certifications) {
-  const reveal = () => {
-    const certs = document.querySelectorAll('.cert');
-    for (let i = 0; i < certs.length; i++) {
-      const windowHeight = window.innerHeight;
-      const elementTop = certs[i].getBoundingClientRect().top;
-      const elementVisible = 150;
-      if (elementTop < windowHeight - elementVisible) {
-        certs[i].classList.remove('hidden');
-        certs[i].classList.add('shown');
-      } else {
-        certs[i].classList.remove('shown');
-        certs[i].classList.add('hidden');
-      }
-    }
-  };
-  window.addEventListener('scroll', reveal);
-  reveal();
+const Certifications = ({ certs }: Certifications) => {
+  const isLarge = useMediaQuery({
+    query: '(min-width: 1070px)',
+    minDeviceWidth: 1070,
+    type: 'screen',
+  });
 
   return (
     <div className='certifications'>
-      {certs.map((cert) => (
-        <CertCard key={cert.id} {...cert} />
-      ))}
+      <Swiper
+        spaceBetween={50}
+        slidesPerView={isLarge ? 3 : 1}
+        onSlideChange={() => console.log('slide change')}
+        onSwiper={(swiper) => console.log(swiper)}
+      >
+        {certs.map((cert) => (
+          <SwiperSlide>
+            <CertCard key={cert.id} {...cert} />
+          </SwiperSlide>
+        ))}
+      </Swiper>
     </div>
   );
-}
+};
 
 export default Certifications;
