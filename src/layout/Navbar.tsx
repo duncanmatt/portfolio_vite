@@ -85,11 +85,6 @@ function DesktopHeader({ links }: Links) {
 function Navbar() {
   const links = [
     {
-      id: 0,
-      title: 'Resume',
-      url: 'https://docs.google.com/document/d/148KYcqKCQsYdE5j5iZb6p0FrsT0G4pqw74puKjrwgJM/edit?usp=sharing',
-    },
-    {
       id: 1,
       title: 'Linkedin',
       url: 'https://linkedin.com/in/matt-duncan-601997268',
@@ -100,6 +95,11 @@ function Navbar() {
       title: 'GitHub',
       url: 'https://github.com/duncanmatt',
       icon: <GitHubIcon />,
+    },
+    {
+      id: 0,
+      title: 'Resume',
+      url: 'https://docs.google.com/document/d/148KYcqKCQsYdE5j5iZb6p0FrsT0G4pqw74puKjrwgJM/edit?usp=sharing',
     },
   ];
   const isMobile = useMediaQuery({ query: '(max-width: 800px)' });

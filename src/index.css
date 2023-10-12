@@ -73,12 +73,8 @@ body {
   margin: 0;
   background-color: #121212;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
   font-family: var(--ff-sans-serif);
   font-size: calc(15px + 0.390625vw);
-  font-kerning: auto;
   line-height: 1.15;
   text-rendering: optimizeLegibility;
   font-size-adjust: 100%;
@@ -125,13 +121,13 @@ h1 {
 }
 
 h2 {
-  padding-inline: 1rem 0;
+  padding: 0;
   letter-spacing: 0.21rem;
-  font-family: var(--ff-display);
-  font-size: 3rem;
+  font-size: 2.4rem;
   margin: 0;
   color: #fff;
   text-transform: uppercase;
+  font-weight: 300;
 }
 
 .mobileHeaderWrapper {
@@ -160,7 +156,7 @@ h2 {
 
 .desktopHeader {
   display: grid;
-  grid-template-columns: 1fr minmax(200px, 40vw);
+  grid-template-columns: 1fr minmax(200px, 0.4fr);
   grid-template-rows: 60px;
   padding-inline: 1rem 0;
 }
@@ -171,7 +167,7 @@ h2 {
 }
 
 .headerLogo {
-  height: 30px;
+  height: 26px;
   line-height: 0;
   font-size: 0;
   overflow-clip-margin: content-box;
@@ -181,21 +177,24 @@ h2 {
 
 .right {
   display: flex;
-  justify-content: space-evenly;
+  flex: 0;
+  justify-content: end;
   align-items: center;
 }
 
 .navLink {
   color: #fff;
   transform: translateY(1px);
+  margin-right: 1rem;
+  padding: 6px;
 }
 
-.navLink:first-of-type {
+.navLink:last-of-type {
   text-transform: uppercase;
-  font-weight: 400;
-  letter-spacing: -1px;
-  line-height: 1rem;
-  font-size: 1.36rem;
+  font-weight: 300;
+  letter-spacing: 0.06rem;
+  line-height: 24px;
+  font-size: 1.3rem;
 }
 
 .navLink:hover {

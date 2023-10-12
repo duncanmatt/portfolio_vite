@@ -1,5 +1,7 @@
 import { useMediaQuery } from 'react-responsive';
 import ProjectCard from './ProjectCard';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
 
 function LatestContent() {
   const isLarge = useMediaQuery({
@@ -45,11 +47,22 @@ function LatestContent() {
 
   return (
     <>
-      <div className={isLarge ? 'latestLg' : 'latestSm'}>
-        <div className='latestCards'>
-          {items.map((item) => (
-            <ProjectCard key={item.id} {...item} />
-          ))}
+      <div>
+        <div>
+          <Swiper
+            spaceBetween={50}
+            slidesPerView={isLarge ? 2 : 1}
+            onSlideChange={() => console.log('slide change')}
+            onSwiper={(swiper) => console.log(swiper)}
+          >
+            {items.map((item) => (
+              <div>
+                <SwiperSlide>
+                  <ProjectCard key={item.id} {...item} />
+                </SwiperSlide>
+              </div>
+            ))}
+          </Swiper>
         </div>
       </div>
     </>
