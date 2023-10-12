@@ -1,11 +1,11 @@
 import IntroContent from '../components/IntroContent';
 
-function Intro() {
+const Intro = () => {
   return (
-    <section className='intro' tabIndex={0}>
+    <section className='intro'>
       <IntroContent />
     </section>
   );
-}
+};
 
 export default Intro;

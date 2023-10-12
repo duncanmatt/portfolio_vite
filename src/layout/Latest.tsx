@@ -1,12 +1,12 @@
 import LatestContent from '../components/LatestContent';
 
-function Latest() {
+const Latest = () => {
   return (
-    <section className='latest' tabIndex={0}>
+    <section id='latest' className='latest'>
       <h2>Recent Work</h2>
       <LatestContent />
     </section>
   );
-}
+};
 
 export default Latest;
