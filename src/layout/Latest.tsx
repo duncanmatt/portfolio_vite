@@ -4,7 +4,7 @@ const Latest = () => {
   return (
     <section id='latest' className='latest'>
       <div>
-        <div>
+        <div className='headingWrapper'>
           <h2>Recent Work</h2>
         </div>
         <LatestContent />

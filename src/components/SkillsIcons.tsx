@@ -16,7 +16,6 @@ const SkillsIcons = () => {
             href='https://html.spec.whatwg.org'
             className='skillItemInner'
           >
-            <span className='skillName'>HTML</span>
             <span className='skillIconWrapper'>
               <img
                 className='skillIcon'
@@ -34,7 +33,6 @@ const SkillsIcons = () => {
             href='https://www.w3.org/TR/CSS/#css'
             className='skillItemInner'
           >
-            <span className='skillName'>CSS</span>
             <span className='skillIconWrapper'>
               <img
                 className='skillIcon'
@@ -50,7 +48,6 @@ const SkillsIcons = () => {
             href='https://developer.mozilla.org/en-US/docs/Web/JavaScript'
             className='skillItemInner'
           >
-            <span className='skillName'>JavaScript</span>
             <span className='skillIconWrapper'>
               <img
                 className='skillIcon'
@@ -66,7 +63,6 @@ const SkillsIcons = () => {
             href='https://figma.com'
             className='skillItemInner'
           >
-            <span className='skillName'>Figma</span>
             <span className='skillIconWrapper'>
               <img
                 className='skillIcon'
@@ -82,7 +78,6 @@ const SkillsIcons = () => {
             href='https://github.com'
             className='skillItemInner'
           >
-            <span className='skillName'>Git</span>
             <span className='skillIconWrapper'>
               <img
                 className='skillIcon'
@@ -98,7 +93,6 @@ const SkillsIcons = () => {
             href='https://react.dev'
             className='skillItemInner'
           >
-            <span className='skillName'>React</span>
             <span className='skillIconWrapper'>
               <img
                 className='skillIcon'
@@ -114,7 +108,6 @@ const SkillsIcons = () => {
             href='https://nodejs.org/en'
             className='skillItemInner'
           >
-            <span className='skillName'>Node.js</span>
             <span className='skillIconWrapper'>
               <img
                 className='skillIcon'
@@ -130,7 +123,6 @@ const SkillsIcons = () => {
             href='https://www.mongodb.com'
             className='skillItemInner'
           >
-            <span className='skillName'>MongoDB</span>
             <span className='skillIconWrapper'>
               <img
                 className='skillIcon'
@@ -146,7 +138,6 @@ const SkillsIcons = () => {
             href='https://redux.js.org'
             className='skillItemInner'
           >
-            <span className='skillName'>Redux</span>
             <span className='skillIconWrapper'>
               <img
                 className='skillIcon'
@@ -162,7 +153,6 @@ const SkillsIcons = () => {
             href='https://aws.amazon.com'
             className='skillItemInner'
           >
-            <span className='skillName'>AWS</span>
             <span className='skillIconWrapper'>
               <img
                 className='skillIcon'
@@ -178,7 +168,6 @@ const SkillsIcons = () => {
             href='https://www.typescriptlang.org'
             className='skillItemInner'
           >
-            <span className='skillName'>TypeScript</span>
             <span className='skillIconWrapper'>
               <img
                 className='skillIcon'
@@ -194,7 +183,6 @@ const SkillsIcons = () => {
             href='https://nextjs.org'
             className='skillItemInner'
           >
-            <span className='skillName'>Next.js</span>
             <span className='skillIconWrapper'>
               <svg
                 className='skillIcon'

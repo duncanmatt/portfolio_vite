@@ -25,7 +25,7 @@ const Certified = () => {
   return (
     <section id='certified' className='certified'>
       <div>
-        <div>
+        <div className='headingWrapper'>
           <h2>Certified</h2>
         </div>
         <Certifications certs={certs} />
