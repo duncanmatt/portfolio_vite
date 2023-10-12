@@ -2,8 +2,10 @@ import SkillsIcons from '../components/SkillsIcons';
 
 const Skills = () => {
   return (
-    <section className='skills'>
-      <h2>Skills</h2>
+    <section id='skills' className='skills'>
+      <div>
+        <h2>Skills</h2>
+      </div>
       <SkillsIcons />
     </section>
   );

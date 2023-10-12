@@ -2,7 +2,7 @@ import IntroContent from '../components/IntroContent';
 
 const Intro = () => {
   return (
-    <section className='intro'>
+    <section id='intro' className='intro'>
       <IntroContent />
     </section>
   );

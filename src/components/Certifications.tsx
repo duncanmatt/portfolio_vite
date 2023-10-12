@@ -16,8 +16,8 @@ type Certifications = {
 
 const Certifications = ({ certs }: Certifications) => {
   const isLarge = useMediaQuery({
-    query: '(min-width: 1070px)',
-    minDeviceWidth: 1070,
+    query: '(min-width: 925px)',
+    minDeviceWidth: 925,
     type: 'screen',
   });
 
