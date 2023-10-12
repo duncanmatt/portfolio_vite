@@ -1,4 +1,4 @@
-// import GitHubIcon from '../layout/assets/LinkedIn.svg';
+import GitHubIcon from '../layout/assets/Github.tsx';
 
 type Project = {
   id: number;
@@ -30,10 +30,7 @@ function ProjectCard(project: Project) {
               Visit
             </a>
             <a className='projCardGH' href={project.urlGH}>
-              {/* <GitHubIcon
-								fontSize='large'
-								// style={{ color: '#fff' }}
-							/> */}
+              <GitHubIcon />
             </a>
           </div>
         </div>
