@@ -13,6 +13,14 @@ function LatestContent() {
   const items = [
     {
       id: 0,
+      title: 'BLACK SHEEP WORLD',
+      desc: 'Ecommerce web app built with Next.js that utilizes lambda functions to efficiently perform crucial functionality.',
+      pic: 'https://d1suwrqf4r82dt.cloudfront.net/ecommPreview.webp',
+      url: 'https://dev.d2ev7e5869alah.amplifyapp.com',
+      urlGH: 'https://github.com/duncanmatt/ecomm_next',
+    },
+    {
+      id: 1,
       title: 'FANTASY FOOTBALL AUXILIARY',
       desc: 'Web app made with Next.js which consolidates necessary information for efficient draft research.',
       pic: 'https://d1suwrqf4r82dt.cloudfront.net/ffPreview.webp',
@@ -20,7 +28,7 @@ function LatestContent() {
       urlGH: 'https://github.com/duncanmatt/fantasy-football',
     },
     {
-      id: 1,
+      id: 2,
       title: 'GITHUB FINDER',
       desc: 'React app that gives users the ability to search for and view profiles on GitHub by making use of the GitHub API.',
       pic: 'https://d1suwrqf4r82dt.cloudfront.net/ghPreview.webp',
@@ -28,15 +36,7 @@ function LatestContent() {
       urlGH: 'https://github.com/duncanmatt/github-finder',
     },
     {
-      id: 2,
-      title: 'BLACK SHEEP WORLD',
-      desc: 'Ecommerce web app built with Next.js which utilizes lambda functions to efficiently perform crucial functionality.',
-      pic: 'https://d1suwrqf4r82dt.cloudfront.net/ecommPreview.webp',
-      url: 'https://dev.d2ev7e5869alah.amplifyapp.com',
-      urlGH: 'https://github.com/duncanmatt/ecomm_next',
-    },
-    {
-      id: 4,
+      id: 3,
       title: 'HOUSE MARKETPLACE',
       desc: 'React app for posting or viewing real estate listings that are stored with firebase',
       pic: 'https://d1suwrqf4r82dt.cloudfront.net/rePreview.webp',
