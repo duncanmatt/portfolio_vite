@@ -697,16 +697,9 @@ section > div > .headingWrapper {
   color: #b4b4b4;
 }
 
-@media (min-width: 500px) {
-  .skillItems {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    grid-template-rows: repeat(3, minmax(0, 1fr));
-  }
-}
-
 @media (min-width: 800px) {
   .skillItemsLg {
-    grid-template-columns: repeat(5, minmax(0, 1fr));
+    grid-template-columns: repeat(6, minmax(0, 1fr));
     grid-template-rows: repeat(2, minmax(0, 1fr));
   }
   .introContent {
@@ -726,12 +719,12 @@ section > div > .headingWrapper {
     padding: 0;
   }
   .headshotWrapper {
-    grid-column: 2;
-    grid-row: 1 / span 2;
+    grid-column: 1;
+    grid-row: 1;
   }
   .skillIconsWrapper {
     grid-row: 2;
-    grid-column: 1;
+    grid-column: 1 / span 2;
     transform: translateX(3rem);
   }
 }
