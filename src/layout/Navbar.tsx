@@ -45,7 +45,7 @@ function MobileHeader({ links }: Links) {
           }`}
         >
           <nav className='navInner'>
-            <menu className='menuLinks'>
+            <ul className='menuLinks'>
               {links.map((link) => (
                 <li key={link.id} className='menuLink'>
                   <a
@@ -57,7 +57,7 @@ function MobileHeader({ links }: Links) {
                   </a>
                 </li>
               ))}
-            </menu>
+            </ul>
           </nav>
         </div>
       </div>

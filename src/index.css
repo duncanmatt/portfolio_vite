@@ -69,6 +69,11 @@
   transition: top 0.05s ease-in;
 }
 
+html,
+body {
+  overscroll-behavior: none;
+}
+
 body {
   margin: 0;
   background-color: #121212;
