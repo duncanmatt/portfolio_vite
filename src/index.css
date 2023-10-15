@@ -197,8 +197,8 @@ section > div > .headingWrapper {
   height: 2px;
   left: 2px;
   right: 2px;
-  -webkit-transition: all 0.45s linear;
-  transition: all 0.45s linear;
+  -webkit-transition: all 325ms linear;
+  transition: all 325ms linear;
   -webkit-transform-origin: center center;
   transform-origin: center center;
 }
@@ -302,29 +302,29 @@ section > div > .headingWrapper {
 }
 
 .menuLink:nth-of-type(2) {
-  transition-delay: 200ms;
+  transition-delay: 225ms;
   /* height: 4.925rem; */
 }
 
 .menuLink:nth-of-type(3) {
-  transition-delay: 275ms;
+  transition-delay: 300ms;
   height: 6rem;
 }
 
 .menuLink:nth-of-type(4) {
-  transition-delay: 350ms;
+  transition-delay: 375ms;
 }
 
 .menuLink:nth-of-type(5) {
-  transition-delay: 425ms;
+  transition-delay: 450ms;
 }
 
 .menuLink:nth-of-type(6) {
-  transition-delay: 500ms;
+  transition-delay: 525ms;
 }
 
 .menuLink:nth-of-type(7) {
-  transition-delay: 575ms;
+  transition-delay: 600ms;
 }
 
 .menuLinkTitle:active,
