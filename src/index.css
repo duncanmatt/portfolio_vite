@@ -197,8 +197,8 @@ section > div > .headingWrapper {
   height: 2px;
   left: 2px;
   right: 2px;
-  -webkit-transition: all 0.3s linear;
-  transition: all 0.3s linear;
+  -webkit-transition: all 0.45s linear;
+  transition: all 0.45s linear;
   -webkit-transform-origin: center center;
   transform-origin: center center;
 }
@@ -224,8 +224,8 @@ section > div > .headingWrapper {
 }
 
 .navMenu {
-  transition: left 0.45s cubic-bezier(0.39, 0.575, 0.565, 1);
-  transition: left 0.45s cubic-bezier(0.39, 0.575, 0.565, 1);
+  transition: left 325ms cubic-bezier(0.39, 0.575, 0.565, 1);
+  transition: left 325ms cubic-bezier(0.39, 0.575, 0.565, 1);
   background-color: rgba(0, 0, 0, 0.14);
   backdrop-filter: blur(124px) saturate(2.4);
   -webkit-backdrop-filter: blur(124px) saturate(2.4);
@@ -252,6 +252,7 @@ section > div > .headingWrapper {
 .navInner {
   position: relative;
   padding-inline: 1rem;
+  width: 100%;
   position: absolute;
   top: 24%;
   transform: translateY(-24%);
@@ -266,14 +267,15 @@ section > div > .headingWrapper {
   display: inline-block;
   padding-bottom: 24px;
   opacity: 0;
-  transition: opacity 0.56667s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  transition: opacity 150ms ease;
+  transition: opacity 150ms ease;
 }
 
 .menuLinkContent {
   display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
+  width: 100%;
   align-items: center;
+  padding-block: 2px;
 }
 
 .menuLinkTitle {
@@ -287,6 +289,7 @@ section > div > .headingWrapper {
   letter-spacing: 0.042rem;
   transform: translateY(1px);
   transition: transform 115ms ease;
+  text-align: right;
 }
 
 /* MENU LINK TRANSITIONS */
@@ -294,35 +297,35 @@ section > div > .headingWrapper {
   opacity: 1;
 }
 
-/* .menuLink:nth-of-type(1) {
-  transition-delay: 300ms;
-} */
+.menuLink:nth-of-type(1) {
+  transition-delay: 150ms;
+}
 
 .menuLink:nth-of-type(2) {
-  /* transition-delay: 300ms; */
-  height: 4.925rem;
+  transition-delay: 200ms;
+  /* height: 4.925rem; */
 }
 
 .menuLink:nth-of-type(3) {
-  /* transition-delay: 525ms; */
-  height: 5.595rem;
+  transition-delay: 275ms;
+  height: 6rem;
 }
 
-/* .menuLink:nth-of-type(4) {
-  transition-delay: 750ms;
+.menuLink:nth-of-type(4) {
+  transition-delay: 350ms;
 }
 
 .menuLink:nth-of-type(5) {
-  transition-delay: 750ms;
+  transition-delay: 425ms;
 }
 
 .menuLink:nth-of-type(6) {
-  transition-delay: 750ms;
+  transition-delay: 500ms;
 }
 
 .menuLink:nth-of-type(7) {
-  transition-delay: 750ms;
-} */
+  transition-delay: 575ms;
+}
 
 .menuLinkTitle:active,
 .menuLinkTitle:hover {
