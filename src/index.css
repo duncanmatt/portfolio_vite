@@ -250,19 +250,20 @@ section > div > .headingWrapper {
 
 .navInner {
   position: relative;
-  padding-top: 4.5rem;
   padding-inline: 1rem;
+  position: absolute;
+  top: 24%;
+  transform: translateY(-24%);
 }
 
 .menuLinks {
   display: flex;
-  height: 100%;
   flex-direction: column;
 }
 
 .menuLink {
   display: inline-block;
-  margin-bottom: 24px;
+  padding-bottom: 24px;
 }
 
 .menuLinkContent {
@@ -270,21 +271,23 @@ section > div > .headingWrapper {
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
-  padding-block: 8px;
-  line-height: 90%;
 }
 
 .menuLinkTitle {
-  transition: opacity 0.3s ease-in;
   flex-grow: 1;
   flex-shrink: 1;
   flex-basis: auto;
   text-transform: uppercase;
-  font-weight: 400;
-  font-size: 24px;
+  font-size: 1.695rem;
   color: #e3e3e3;
   opacity: 0;
+  line-height: 120%;
+  letter-spacing: 0.042rem;
 }
+
+/* .menuLinkTitle:first-of-type {
+  transition: opacity 0.3s ease-in;
+} */
 
 .mobileMenuOpen
   > .navInner
@@ -298,13 +301,13 @@ section > div > .headingWrapper {
 .menuLinkTitle:active,
 .menuLinkTitle:hover {
   color: #fff;
+  font-weight: 400;
 }
 
 /* ---INTRO--- */
 .intro {
   display: block;
   position: relative;
-  /* height: 100vh; */
 }
 
 .introContent {
@@ -328,17 +331,6 @@ section > div > .headingWrapper {
   font-weight: 400;
   flex-basis: 90%;
   text-align: center;
-}
-
-.techStackWrapper {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr);
-  justify-content: center;
-}
-
-.techStack {
-  display: flex;
-  flex-direction: column;
 }
 
 .langIcon {
@@ -661,6 +653,9 @@ section > div > .headingWrapper {
 }
 
 @media (min-width: 800px) {
+  .menuLinkTitle {
+    font-size: 2.4rem;
+  }
   .skillItemsLg {
     grid-template-columns: repeat(6, minmax(0, 1fr));
     grid-template-rows: repeat(2, minmax(0, 1fr));

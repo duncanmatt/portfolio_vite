@@ -48,7 +48,7 @@ function MobileHeader({ links }: Links) {
           }`}
         >
           <nav className='navInner'>
-            <ul className='menuLinks'>
+            <menu className='menuLinks'>
               {links.map((link) => (
                 <li key={link.id} className='menuLink'>
                   <a
@@ -60,7 +60,7 @@ function MobileHeader({ links }: Links) {
                   </a>
                 </li>
               ))}
-            </ul>
+            </menu>
           </nav>
         </div>
       </div>
@@ -92,7 +92,7 @@ function Navbar() {
     },
     {
       id: 4,
-      title: 'FANTASY FOOTBALL AUXILIARY',
+      title: 'FF AUXILIARY',
       url: 'https://ffauxiliary.com',
     },
     {
