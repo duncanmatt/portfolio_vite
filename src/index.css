@@ -197,8 +197,8 @@ section > div > .headingWrapper {
   height: 2px;
   left: 2px;
   right: 2px;
-  -webkit-transition: all 325ms linear;
-  transition: all 325ms linear;
+  -webkit-transition: all 330ms linear;
+  transition: all 330ms linear;
   -webkit-transform-origin: center center;
   transform-origin: center center;
 }
@@ -224,8 +224,8 @@ section > div > .headingWrapper {
 }
 
 .navMenu {
-  transition: left 325ms cubic-bezier(0.39, 0.575, 0.565, 1);
-  transition: left 325ms cubic-bezier(0.39, 0.575, 0.565, 1);
+  transition: left 330ms cubic-bezier(0.39, 0.575, 0.565, 1);
+  transition: left 330ms cubic-bezier(0.39, 0.575, 0.565, 1);
   background-color: rgba(0, 0, 0, 0.14);
   backdrop-filter: blur(124px) saturate(2.4);
   -webkit-backdrop-filter: blur(124px) saturate(2.4);
@@ -267,13 +267,12 @@ section > div > .headingWrapper {
   display: inline-block;
   padding-bottom: 24px;
   opacity: 0;
-  transition: opacity 150ms ease;
-  transition: opacity 150ms ease;
+  transition: opacity 250ms ease;
+  transition: opacity 250ms ease;
 }
 
 .menuLinkContent {
   display: flex;
-  width: 100%;
   align-items: center;
   padding-block: 2px;
 }
@@ -288,7 +287,7 @@ section > div > .headingWrapper {
   line-height: 115%;
   letter-spacing: 0.042rem;
   transform: translateY(1px);
-  transition: transform 115ms ease;
+  transition: transform 115ms ease, color 115ms ease;
   text-align: right;
 }
 
@@ -302,29 +301,28 @@ section > div > .headingWrapper {
 }
 
 .menuLink:nth-of-type(2) {
-  transition-delay: 225ms;
-  /* height: 4.925rem; */
+  transition-delay: 215ms;
 }
 
 .menuLink:nth-of-type(3) {
-  transition-delay: 300ms;
-  height: 6rem;
+  transition-delay: 280ms;
 }
 
 .menuLink:nth-of-type(4) {
-  transition-delay: 375ms;
+  transition-delay: 345ms;
+  height: 6rem;
 }
 
 .menuLink:nth-of-type(5) {
-  transition-delay: 450ms;
+  transition-delay: 410ms;
 }
 
 .menuLink:nth-of-type(6) {
-  transition-delay: 525ms;
+  transition-delay: 475ms;
 }
 
 .menuLink:nth-of-type(7) {
-  transition-delay: 600ms;
+  transition-delay: 540ms;
 }
 
 .menuLinkTitle:active,

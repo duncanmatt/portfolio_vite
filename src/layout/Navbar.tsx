@@ -72,38 +72,38 @@ function Navbar() {
   const links = [
     {
       id: 0,
-      title: 'Linkedin',
-      url: 'https://linkedin.com/in/matt-duncan-601997268',
-    },
-    {
-      id: 1,
-      title: 'Resume',
-      url: 'https://docs.google.com/document/d/148KYcqKCQsYdE5j5iZb6p0FrsT0G4pqw74puKjrwgJM/edit?usp=sharing',
-    },
-    {
-      id: 2,
-      title: 'GitHub',
-      url: 'https://github.com/duncanmatt',
-    },
-    {
-      id: 3,
       title: 'BLACK SHEEP WORLD',
       url: 'https://dev.d2ev7e5869alah.amplifyapp.com',
     },
     {
-      id: 4,
+      id: 1,
       title: 'FF AUXILIARY',
       url: 'https://ffauxiliary.com',
     },
     {
-      id: 5,
+      id: 2,
       title: 'GITHUB FINDER',
       url: 'https://github-finder-rho-ivory.vercel.app/',
     },
     {
-      id: 6,
+      id: 3,
       title: 'HOUSE MARKETPLACE',
       url: 'https://house-marketplace-nu-ochre.vercel.app/',
+    },
+    {
+      id: 4,
+      title: 'GitHub',
+      url: 'https://github.com/duncanmatt',
+    },
+    {
+      id: 5,
+      title: 'Linkedin',
+      url: 'https://linkedin.com/in/matt-duncan-601997268',
+    },
+    {
+      id: 6,
+      title: 'Resume',
+      url: 'https://docs.google.com/document/d/148KYcqKCQsYdE5j5iZb6p0FrsT0G4pqw74puKjrwgJM/edit?usp=sharing',
     },
   ];
 
