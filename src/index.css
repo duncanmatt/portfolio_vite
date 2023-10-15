@@ -224,10 +224,11 @@ section > div > .headingWrapper {
 }
 
 .navMenu {
-  transition: left 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
+  transition: left 0.45s cubic-bezier(0.39, 0.575, 0.565, 1);
+  transition: left 0.45s cubic-bezier(0.39, 0.575, 0.565, 1);
   background-color: rgba(0, 0, 0, 0.14);
-  backdrop-filter: blur(150px) saturate(1.8);
-  -webkit-backdrop-filter: blur(150px) saturate(1.8);
+  backdrop-filter: blur(124px) saturate(2.4);
+  -webkit-backdrop-filter: blur(124px) saturate(2.4);
   position: fixed;
   top: 60px;
   height: 100%;
@@ -264,6 +265,8 @@ section > div > .headingWrapper {
 .menuLink {
   display: inline-block;
   padding-bottom: 24px;
+  opacity: 0;
+  transition: opacity 0.56667s cubic-bezier(0.445, 0.05, 0.55, 0.95);
 }
 
 .menuLinkContent {
@@ -280,34 +283,58 @@ section > div > .headingWrapper {
   text-transform: uppercase;
   font-size: 1.695rem;
   color: #e3e3e3;
-  opacity: 0;
-  line-height: 120%;
+  line-height: 115%;
   letter-spacing: 0.042rem;
+  transform: translateY(1px);
+  transition: transform 115ms ease;
 }
 
-/* .menuLinkTitle:first-of-type {
-  transition: opacity 0.3s ease-in;
-} */
-
-.mobileMenuOpen
-  > .navInner
-  > .menuLinks
-  > .menuLink
-  > .menuLinkContent
-  > .menuLinkTitle {
+/* MENU LINK TRANSITIONS */
+.mobileMenuOpen > .navInner > .menuLinks > .menuLink {
   opacity: 1;
 }
+
+/* .menuLink:nth-of-type(1) {
+  transition-delay: 300ms;
+} */
+
+.menuLink:nth-of-type(2) {
+  /* transition-delay: 300ms; */
+  height: 4.925rem;
+}
+
+.menuLink:nth-of-type(3) {
+  /* transition-delay: 525ms; */
+  height: 5.595rem;
+}
+
+/* .menuLink:nth-of-type(4) {
+  transition-delay: 750ms;
+}
+
+.menuLink:nth-of-type(5) {
+  transition-delay: 750ms;
+}
+
+.menuLink:nth-of-type(6) {
+  transition-delay: 750ms;
+}
+
+.menuLink:nth-of-type(7) {
+  transition-delay: 750ms;
+} */
 
 .menuLinkTitle:active,
 .menuLinkTitle:hover {
   color: #fff;
-  font-weight: 400;
+  transform: translateY(0px);
 }
 
 /* ---INTRO--- */
 .intro {
   display: block;
   position: relative;
+  padding-top: 60px;
 }
 
 .introContent {

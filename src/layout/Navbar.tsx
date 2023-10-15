@@ -20,7 +20,7 @@ function MobileHeader({ links }: Links) {
   useEffect(() => {
     menuOpen
       ? (document.body.style.overflow = 'hidden')
-      : (document.body.style.overflow = 'scroll');
+      : (document.body.style.overflow = 'visible');
   }, [menuOpen]);
 
   return (
@@ -77,13 +77,13 @@ function Navbar() {
     },
     {
       id: 1,
-      title: 'GitHub',
-      url: 'https://github.com/duncanmatt',
+      title: 'Resume',
+      url: 'https://docs.google.com/document/d/148KYcqKCQsYdE5j5iZb6p0FrsT0G4pqw74puKjrwgJM/edit?usp=sharing',
     },
     {
       id: 2,
-      title: 'Resume',
-      url: 'https://docs.google.com/document/d/148KYcqKCQsYdE5j5iZb6p0FrsT0G4pqw74puKjrwgJM/edit?usp=sharing',
+      title: 'GitHub',
+      url: 'https://github.com/duncanmatt',
     },
     {
       id: 3,
