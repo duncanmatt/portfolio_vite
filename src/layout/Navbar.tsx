@@ -1,15 +1,10 @@
-import { useState } from 'react';
-import { useMediaQuery } from 'react-responsive';
-// import RedditIcon from '@mui/icons-material/Reddit';
-import LinkedInIcon from './assets/LinkedIn.tsx';
-import GitHubIcon from './assets/Github.tsx';
+import { useState, useEffect } from 'react';
 import nameLogo from './assets/nameLogo.svg';
 
 type Link = {
   id: number;
   title: string;
   url: string;
-  icon?: JSX.Element;
 };
 
 type Links = {
@@ -18,7 +13,15 @@ type Links = {
 
 function MobileHeader({ links }: Links) {
   const [menuOpen, setMenuOpen] = useState(false);
-  const showMenu = () => setMenuOpen(!menuOpen);
+  const showMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
+  useEffect(() => {
+    menuOpen
+      ? (document.body.style.overflow = 'hidden')
+      : (document.body.style.overflow = 'scroll');
+  }, [menuOpen]);
 
   return (
     <>
@@ -65,52 +68,48 @@ function MobileHeader({ links }: Links) {
   );
 }
 
-function DesktopHeader({ links }: Links) {
-  return (
-    <nav className='desktopHeader'>
-      <h1 className='desktopHeaderName'>
-        <img className='headerLogo' src={nameLogo} alt='Matt Duncan' />
-      </h1>
-      <span className='right'>
-        {links.map((link) => (
-          <a target='_blank' key={link.id} href={link.url} className='navLink'>
-            {link.icon ? link.icon : link.title}
-          </a>
-        ))}
-      </span>
-    </nav>
-  );
-}
-
 function Navbar() {
   const links = [
     {
-      id: 1,
+      id: 0,
       title: 'Linkedin',
       url: 'https://linkedin.com/in/matt-duncan-601997268',
-      icon: <LinkedInIcon />,
+    },
+    {
+      id: 1,
+      title: 'GitHub',
+      url: 'https://github.com/duncanmatt',
     },
     {
       id: 2,
-      title: 'GitHub',
-      url: 'https://github.com/duncanmatt',
-      icon: <GitHubIcon />,
-    },
-    {
-      id: 0,
       title: 'Resume',
       url: 'https://docs.google.com/document/d/148KYcqKCQsYdE5j5iZb6p0FrsT0G4pqw74puKjrwgJM/edit?usp=sharing',
     },
+    {
+      id: 3,
+      title: 'BLACK SHEEP WORLD',
+      url: 'https://dev.d2ev7e5869alah.amplifyapp.com',
+    },
+    {
+      id: 4,
+      title: 'FANTASY FOOTBALL AUXILIARY',
+      url: 'https://ffauxiliary.com',
+    },
+    {
+      id: 5,
+      title: 'GITHUB FINDER',
+      url: 'https://github-finder-rho-ivory.vercel.app/',
+    },
+    {
+      id: 6,
+      title: 'HOUSE MARKETPLACE',
+      url: 'https://house-marketplace-nu-ochre.vercel.app/',
+    },
   ];
-  const isMobile = useMediaQuery({ query: '(max-width: 800px)' });
 
   return (
     <header>
-      {isMobile ? (
-        <MobileHeader links={links} />
-      ) : (
-        <DesktopHeader links={links} />
-      )}
+      <MobileHeader links={links} />
     </header>
   );
 }
