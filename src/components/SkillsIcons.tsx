@@ -1,12 +1,4 @@
-import { useMediaQuery } from 'react-responsive';
-
 const SkillsIcons = () => {
-	const isLarge = useMediaQuery({
-		query: '(min-width: 800px)',
-		minDeviceWidth: 800,
-		type: 'screen',
-	});
-
 	return (
 		<div className='skillIconsWrapper'>
 			<ul className='skillItems'>

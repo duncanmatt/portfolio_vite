@@ -368,8 +368,7 @@ section > div > .headingWrapper {
 	grid-column: 1 / span 12;
 	display: flex;
 	justify-content: center;
-	/* align-items: center; */
-	margin-block: 3rem 2rem;
+	margin-block: 2rem;
 }
 
 .briefAbout {
@@ -421,6 +420,7 @@ section > div > .headingWrapper {
 
 .skillIconWrapper {
 	height: 100%;
+	width: 100%;
 	background-color: #2c2c2c;
 	display: flex;
 	border-radius: 50%;
@@ -456,28 +456,6 @@ section > div > .headingWrapper {
 	border-radius: 0;
 	margin: 0 !important;
 }
-/* 
-.latestLg .latestCards {
-	display: grid;
-	grid-template-columns: repeat(2, minmax(0, 1fr));
-	padding: 1.85rem 1rem;
-	gap: 3rem 2rem;
-}
-
-.latestSm .latestCards {
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-ms-flex-direction: column;
-	flex-direction: column;
-	-ms-flex-wrap: wrap;
-	flex-wrap: wrap;
-	-webkit-box-direction: normal;
-	-webkit-box-orient: vertical;
-	-webkit-box-pack: justify;
-	padding: 1.85rem 0.78125rem;
-	justify-content: space-between;
-} */
 
 .swiper-wrapper .swiper-slide {
 	height: auto;
@@ -493,27 +471,6 @@ section > div > .headingWrapper {
 	-webkit-box-orient: horizontal;
 	-webkit-box-direction: normal;
 }
-
-/* .projCard:before .projCardInner:before {
-  background-image: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    color-stop(38%, transparent),
-    to(rgba(0, 0, 0, 0.5))
-  );
-  background-image: linear-gradient(
-    180deg,
-    transparent 38%,
-    rgba(0, 0, 0, 0.5)
-  );
-  border-radius: 1.25rem;
-  content: '';
-  height: 100%;
-  position: absolute;
-  width: 100%;
-  z-index: 3;
-} */
 
 .projCardInner {
 	height: 100%;
@@ -625,7 +582,7 @@ section > div > .headingWrapper {
 	position: relative;
 }
 
-.certified .certifications {
+.certifications {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
