@@ -7,9 +7,15 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 
 const LatestContent = () => {
-	const isLarge = useMediaQuery({
-		query: '(min-width: 1600px)',
-		minDeviceWidth: 1600,
+	const split = useMediaQuery({
+		query: '(min-width: 800px)',
+		minDeviceWidth: 800,
+		type: 'screen',
+	});
+
+	const quad = useMediaQuery({
+		query: '(min-width: 1500px)',
+		minDeviceWidth: 1500,
 		type: 'screen',
 	});
 
@@ -54,18 +60,12 @@ const LatestContent = () => {
 				<Swiper
 					modules={[Pagination, A11y]}
 					spaceBetween={20}
-					slidesPerView={isLarge ? 4 : 'auto'}
-					pagination={{ clickable: true }}
-					onSlideChange={() => console.log('slide change')}
-					onSwiper={swiper => console.log(swiper)}>
-					{items.map((item, index) => (
-						// <div>
-						<SwiperSlide
-							key={item.id}
-							virtualIndex={index}>
+					slidesPerView={quad ? 4 : split ? 2 : 'auto'}
+					pagination={{ clickable: true }}>
+					{items.map(item => (
+						<SwiperSlide key={item.id}>
 							<ProjectCard {...item} />
 						</SwiperSlide>
-						// </div>
 					))}
 				</Swiper>
 			</div>
