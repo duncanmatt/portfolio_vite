@@ -139,6 +139,11 @@ h2 {
   font-weight: 300;
 }
 
+h3 {
+  margin: 0;
+  padding: 0;
+}
+
 figure {
   margin: 0;
   border-radius: inherit;
@@ -553,28 +558,38 @@ section > div > .headingWrapper {
   flex-direction: column;
   align-items: stretch;
   -webkit-box-orient: vertical;
-  /* z-index: 3; */
   border-bottom-left-radius: 1.25rem;
   border-bottom-right-radius: 1.25rem;
   padding-inline: 1rem;
+  padding-block: 0.45rem;
   height: 100%;
 }
 
 .projCardTitle {
+  padding-block: 0.685rem 0.45rem;
+}
+
+.projCardTitle > div {
   text-align: center;
+  font-weight: 400;
+  line-height: 90%;
+  font-size: 1.225rem;
+  letter-spacing: -0.01px;
 }
 
 .projCardDesc {
   text-align: center;
-  flex-grow: 1;
+  line-height: 120%;
 }
 
 .projCardActions {
-  /* flex-grow: 1; */
-  /* z-index: 4; */
+  flex-grow: 1;
   display: inline-flex;
   flex-direction: row;
-  gap: 1rem;
+  gap: 0.85rem;
+  line-height: 120%;
+  align-items: end;
+  height: 100%;
 }
 
 .projCardActions > a {

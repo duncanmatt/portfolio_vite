@@ -22,8 +22,10 @@ function ProjectCard(project: Project) {
           ></iframe>
         </figure>
         <div className='projCardInfo'>
-          <h3 className='projCardTitle'>{project.title}</h3>
-          <span className='projCardDesc'>{project.desc}</span>
+          <h3 className='projCardTitle'>
+            <div>{project.title}</div>
+          </h3>
+          <p className='projCardDesc'>{project.desc}</p>
           <div className='projCardActions'>
             <a className='projCardVisit' href={project.url}>
               Visit
