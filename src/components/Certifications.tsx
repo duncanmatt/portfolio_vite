@@ -30,8 +30,8 @@ const Certifications = ({ certs }: Certifications) => {
         onSwiper={(swiper) => console.log(swiper)}
       >
         {certs.map((cert) => (
-          <SwiperSlide>
-            <CertCard key={cert.id} {...cert} />
+          <SwiperSlide key={cert.id}>
+            <CertCard {...cert} />
           </SwiperSlide>
         ))}
       </Swiper>

@@ -1,26 +1,18 @@
 type Certification = {
-	id: number;
-	pic: string;
-	desc: string;
-	url: string;
+  id: number;
+  pic: string;
+  desc: string;
+  url: string;
 };
 
 const CertCard = (cert: Certification) => {
-	return (
-		<a
-			className='cert'
-			href={cert.url}>
-			<div
-				style={{ position: 'relative' }}
-				className='certInner'>
-				<img
-					className='certPic'
-					src={cert.pic}
-					alt={cert.desc}
-				/>
-			</div>
-		</a>
-	);
+  return (
+    <a className='cert' href={cert.url}>
+      <div style={{ position: 'relative' }} className='certInner'>
+        <img className='certPic' src={cert.pic} alt={cert.desc} />
+      </div>
+    </a>
+  );
 };
 
 export default CertCard;

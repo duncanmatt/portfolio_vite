@@ -1,9 +1,12 @@
 import { useMediaQuery } from 'react-responsive';
 import ProjectCard from './ProjectCard';
+import { Pagination, A11y } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
 
-function LatestContent() {
+import 'swiper/css';
+import 'swiper/css/pagination';
+
+const LatestContent = () => {
   const isLarge = useMediaQuery({
     query: '(min-width: 925px)',
     minDeviceWidth: 925,
@@ -21,7 +24,7 @@ function LatestContent() {
     },
     {
       id: 1,
-      title: 'FANTASY FOOTBALL AUXILIARY',
+      title: 'FF AUXILIARY',
       desc: 'Web app made with Next.js which consolidates necessary information for efficient draft research.',
       pic: 'https://d1suwrqf4r82dt.cloudfront.net/ffPreview.webp',
       url: 'https://ffauxiliary.com',
@@ -50,23 +53,26 @@ function LatestContent() {
       <div>
         <div>
           <Swiper
-            spaceBetween={50}
-            slidesPerView={isLarge ? 2 : 1}
+            modules={[Pagination, A11y]}
+            autoHeight={true}
+            spaceBetween={20}
+            slidesPerView={isLarge ? 2 : 'auto'}
+            pagination={{ clickable: true }}
             onSlideChange={() => console.log('slide change')}
             onSwiper={(swiper) => console.log(swiper)}
           >
-            {items.map((item) => (
-              <div>
-                <SwiperSlide>
-                  <ProjectCard key={item.id} {...item} />
-                </SwiperSlide>
-              </div>
+            {items.map((item, index) => (
+              // <div>
+              <SwiperSlide key={item.id} virtualIndex={index}>
+                <ProjectCard {...item} />
+              </SwiperSlide>
+              // </div>
             ))}
           </Swiper>
         </div>
       </div>
     </>
   );
-}
+};
 
 export default LatestContent;

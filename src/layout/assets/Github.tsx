@@ -2,7 +2,6 @@ const GitHubIcon = () => {
   return (
     <span>
       <svg
-        fill='#fff'
         viewBox='0 0 24 24'
         focusable='false'
         aria-hidden='true'

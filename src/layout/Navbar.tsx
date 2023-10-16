@@ -68,7 +68,7 @@ function MobileHeader({ links }: Links) {
   );
 }
 
-function Navbar() {
+const Navbar = () => {
   const links = [
     {
       id: 0,
@@ -112,6 +112,6 @@ function Navbar() {
       <MobileHeader links={links} />
     </header>
   );
-}
+};
 
 export default Navbar;

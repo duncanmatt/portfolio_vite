@@ -13,18 +13,17 @@ function ProjectCard(project: Project) {
   return (
     <div className='projCard'>
       <div className='projCardInner' key={project.id}>
-        <a href={project.url} className='projCardLink'>
-          <picture>
-            <img
-              className='projCardPic'
-              src={project.pic}
-              alt={project.title}
-            />
-          </picture>
-        </a>
+        <figure>
+          <iframe
+            src={project.url}
+            className='projCardLink'
+            width='100%'
+            height='100%'
+          ></iframe>
+        </figure>
         <div className='projCardInfo'>
           <h3 className='projCardTitle'>{project.title}</h3>
-          <p className='projCardDesc'>{project.desc}</p>
+          <span className='projCardDesc'>{project.desc}</span>
           <div className='projCardActions'>
             <a className='projCardVisit' href={project.url}>
               Visit
