@@ -149,11 +149,6 @@ h3 {
   padding: 0;
 }
 
-figure {
-  margin: 0;
-  border-radius: inherit;
-}
-
 section > div {
   padding-inline: 1rem;
 }
@@ -360,8 +355,6 @@ section > div > .headingWrapper {
 .introContent {
   display: flex;
   flex-direction: column;
-  animation-name: introContentIn;
-  animation-duration: 0.5s;
 }
 
 .info {
@@ -370,6 +363,8 @@ section > div > .headingWrapper {
   display: flex;
   justify-content: center;
   margin-block: 2rem;
+  animation-name: introContentIn;
+  animation-duration: 0.5s;
 }
 
 .briefAbout {
@@ -385,14 +380,18 @@ section > div > .headingWrapper {
   max-width: 100%;
   position: relative;
   aspect-ratio: 1;
+  overflow: hidden;
+  border-radius: 50%;
+  background-color: #1b1b1b;
+  padding: 1rem;
 }
 
 .headshot {
   height: 100%;
   width: 100%;
-  object-fit: contain;
+  object-fit: cover;
   overflow-clip-margin: content-box;
-  background-size: contain;
+  background-size: cover;
   position: absolute;
   overflow: clip;
 }
@@ -413,6 +412,9 @@ section > div > .headingWrapper {
 
 .skillItemOuter {
   display: flex;
+  box-shadow: 0px 3px 1px 1px #000;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.16);
 }
 
 .skillItemInner {
@@ -422,9 +424,7 @@ section > div > .headingWrapper {
 .skillIconWrapper {
   height: 100%;
   width: 100%;
-  background-color: #2c2c2c;
   display: flex;
-  border-radius: 50%;
 }
 
 .skillIcon {
@@ -475,6 +475,11 @@ section > div > .headingWrapper {
   width: 100%;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
+}
+
+.projCard figure {
+  margin: 0;
+  border-radius: inherit;
 }
 
 .projCardInner {
