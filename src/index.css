@@ -632,7 +632,7 @@ section > div > .headingWrapper {
   font-weight: 300;
   color: #fff;
   background-color: #1c1c1c;
-  padding-top: 2rem;
+  padding-block: 0.925rem 0.125rem;
 }
 
 .footerLinks {
@@ -658,37 +658,33 @@ section > div > .headingWrapper {
   }
 }
 
+@media (min-width: 600px) and (max-width: 800px) {
+  .headshotWrapper {
+    margin: 3rem;
+  }
+}
+
 @media (min-width: 800px) {
   .menuLinkTitle {
     font-size: 2.4rem;
   }
   .introContent {
     display: grid;
+    grid-template-rows: repeat(3, min-content);
     grid-template-columns: repeat(12, minmax(0, 1fr));
-    grid-template-rows: repeat(12, minmax(0, 1fr));
   }
   .info {
-    grid-row: 1 / 4;
+    grid-row: 1;
     grid-column: 1 / span 12;
   }
-  .briefAbout {
-    flex-basis: 90%;
-    letter-spacing: 0.03em;
-    padding: 0;
-    margin: auto;
-  }
   .introContent > figure {
-    grid-row: 4 / span 8;
-    grid-column: span 6 / 12;
-    margin-block: auto;
+    grid-row: 2 / span 2;
+    grid-column: 7 / span 6;
+    max-width: 30rem;
   }
   .skillIconsWrapper {
-    grid-row: 4 / span 8;
-    grid-column: 2 / 5;
-  }
-  .skillItems {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    grid-template-rows: repeat(6, min-content);
+    grid-row: 3;
+    grid-column: 2 / span 5;
   }
 }
 
