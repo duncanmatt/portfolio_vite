@@ -26,10 +26,12 @@ const Certified = () => {
 		<section
 			id='certified'
 			className='certified'>
-			<div className='headingWrapper'>
-				<h2>Certified</h2>
+			<div>
+				<div className='headingWrapper'>
+					<h2>Certified</h2>
+				</div>
+				<Certifications certs={certs} />
 			</div>
-			<Certifications certs={certs} />
 		</section>
 	);
 };

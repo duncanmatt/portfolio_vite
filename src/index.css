@@ -14,6 +14,7 @@
 	--swiper-pagination-color: #fff;
 	--swiper-pagination-bullet-height: 2px;
 	--swiper-pagination-progressbar-bg-color: #fff;
+	--swiper-theme-color: #fff;
 	--swiper-pagination-bullet-inactive-color: #fff;
 }
 
@@ -441,7 +442,7 @@ section > div > .headingWrapper {
 	padding-block: 1rem;
 }
 
-.latest .swiper-pagination {
+.swiper-pagination {
 	display: flex;
 	justify-content: center;
 	position: static;
@@ -449,7 +450,7 @@ section > div > .headingWrapper {
 	margin: 1rem auto;
 }
 
-.latest .swiper-pagination .swiper-pagination-bullet {
+.swiper-pagination .swiper-pagination-bullet {
 	width: auto;
 	max-width: 2rem;
 	flex-grow: 1;
@@ -655,8 +656,8 @@ section > div > .headingWrapper {
 		grid-template-rows: repeat(12, minmax(0, 1fr));
 	}
 	.info {
-		grid-row: 1 / 8;
-		grid-column: 1 / 7;
+		grid-row: 1 / 4;
+		grid-column: 1 / span 12;
 	}
 	.briefAbout {
 		flex-basis: 90%;
@@ -665,13 +666,17 @@ section > div > .headingWrapper {
 		margin: auto;
 	}
 	.introContent > figure {
-		grid-row: 1 / 7;
-		grid-column: 8 / span 12;
+		grid-row: 4 / span 8;
+		grid-column: span 6 / 12;
 		margin-block: auto;
 	}
 	.skillIconsWrapper {
-		grid-row: 10 span / 12 span;
-		grid-column: 1 / span 12;
+		grid-row: 4 / span 8;
+		grid-column: 2 / 5;
+	}
+	.skillItems {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		grid-template-rows: repeat(6, min-content);
 	}
 }
 
@@ -679,5 +684,10 @@ section > div > .headingWrapper {
 	main {
 		max-width: 1600px;
 		margin-inline: auto;
+	}
+	.skillItems {
+		grid-template-columns: repeat(4, minmax(0, 1fr));
+		grid-template-rows: repeat(3, min-content);
+		margin: auto;
 	}
 }
