@@ -1,5 +1,3 @@
-import SkillsIcons from './SkillsIcons';
-
 const IntroContent = () => {
   const title = `
     Hello! I'm Matt Duncan, self-taught developer from northern Virginia.
@@ -19,7 +17,26 @@ const IntroContent = () => {
           />
         </div>
       </figure>
-      <SkillsIcons />
+      <ul className='introLinks'>
+        <li className='introLinkWrapper'>
+          <a
+            target='_blank'
+            className='introLink'
+            href='https://linkedin.com/in/matt-duncan-601997268'
+          >
+            LinkedIn
+          </a>
+        </li>
+        <li className='introLinkWrapper'>
+          <a
+            target='_blank'
+            className='introLink'
+            href='https://github.com/duncanmatt'
+          >
+            GitHub
+          </a>
+        </li>
+      </ul>
     </div>
   );
 };

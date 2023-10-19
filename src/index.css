@@ -367,6 +367,33 @@ section > div > .headingWrapper {
   animation-duration: 0.5s;
 }
 
+.introLinks {
+  display: flex;
+  flex-wrap: nowrap;
+  margin: 0.425rem 2rem;
+  justify-content: center;
+}
+
+.introLinkWrapper {
+  flex-shrink: 0;
+  padding: 6px;
+}
+
+.introLink {
+  color: #121212;
+  background-color: #fff;
+  display: inline-block;
+  justify-content: center;
+  line-height: 34px;
+  text-align: center;
+  border-radius: 1.8545rem;
+  padding-inline: 30px;
+}
+
+.introLink:not(:last-of-type) {
+  margin-right: 0.625rem;
+}
+
 .briefAbout {
   color: #fff;
   font-size: clamp(2rem, 3vw + 1.5rem, 5rem);
@@ -652,15 +679,22 @@ section > div > .headingWrapper {
 }
 
 @media (min-width: 500px) {
+  .introLink {
+    line-height: 46px;
+    padding-inline: 38px;
+  }
   .skillItems {
     grid-template-columns: repeat(4, minmax(0, 1fr));
-    grid-template-rows: repeat(3, minmax(0, 1fr));
+    grid-template-rows: repeat(3, min-content);
   }
 }
 
-@media (min-width: 600px) and (max-width: 800px) {
+@media (min-width: 600px) and (max-width: 799px) {
   .headshotWrapper {
-    margin: 3rem;
+    transform: scale(90%);
+  }
+  .introLinks {
+    transform: translateY(-1rem);
   }
 }
 
@@ -682,9 +716,11 @@ section > div > .headingWrapper {
     grid-column: 7 / span 6;
     max-width: 30rem;
   }
-  .skillIconsWrapper {
-    grid-row: 3;
+  .introLinks {
+    transform: translateY(4.2rem);
+    grid-row: 2 / span 2;
     grid-column: 2 / span 5;
+    margin: auto;
   }
 }
 
