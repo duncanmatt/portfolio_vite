@@ -1,6 +1,6 @@
 import CertCard from './CertCard';
 import { useMediaQuery } from 'react-responsive';
-import { A11y, Pagination } from 'swiper/modules';
+import { A11y, Pagination, Autoplay } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import 'swiper/css';
@@ -27,9 +27,12 @@ const Certifications = ({ certs }: Certifications) => {
 	return (
 		<div>
 			<Swiper
-				modules={[Pagination, A11y]}
+				modules={[Pagination, A11y, Autoplay]}
+				autoplay={
+					{delay: 5000}
+				}
 				spaceBetween={20}
-				slidesPerView={isLarge ? 3 : 1}
+				slidesPerView={isLarge ? 2 : 1}
 				pagination={{ clickable: true }}>
 				{certs.map(cert => (
 					<SwiperSlide key={cert.id}>

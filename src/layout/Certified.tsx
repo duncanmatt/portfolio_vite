@@ -2,6 +2,12 @@ import Certifications from '../components/Certifications';
 
 const certs = [
 	{
+		id: 0,
+		pic: "https://d1suwrqf4r82dt.cloudfront.net/awsCertifiedDeveloper.png",
+		desc: "Passed the associate level developer exam from Amazon Web Services",
+		url: 'https://aws.amazon.com/verification'
+	},
+	{
 		id: 1,
 		pic: 'https://d1suwrqf4r82dt.cloudfront.net/JSAlgoCert.webp',
 		desc: 'Took this course from Colt Steele after getting comfortable with JavaScript.',
