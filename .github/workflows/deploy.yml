@@ -1,0 +1,52 @@
+# This is a basic workflow to help you get started with Actions
+name: Build and Deploy portfolio website content to s3 and CloudFront
+# Controls when the action will run. Invokes the workflow on push events but only for the main branch
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+env:
+  AWS_REGION: 'us-east-1'
+
+# Permission can be added at job level or workflow level
+permissions:
+  id-token: write # This is required for requesting the JWT
+  contents: read # This is required for actions/checkout
+
+jobs:
+  BuildThenDeploy:
+    name: Build Then Deploy
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Node Setup
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      # - name: Install Yarn
+      #   run: npm install -g yarn
+
+      - name: Install deps
+        run: npm ci --cache .npm
+
+      - name: Build
+        run: npm run build
+
+      - name: Configure AWS Creds
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: arn:aws:iam::315256778392:role/portfolio_deploy_role #change to reflect your IAM role’s ARN
+          role-session-name: GitHub_to_AWS_via_FederatedOIDC
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name: Deploy to S3
+        run: aws s3 sync ./out s3://md-portfolio-site --delete
+
+      - name: Invalidate CloudFront Cache
+        run: aws cloudfront create-invalidation --distribution-id ${{ secrets.CF_DIST_ID }} --paths "/*"
